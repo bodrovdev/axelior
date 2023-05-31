@@ -1,0 +1,7 @@
+@use "../mixins";
+
+.side-menu {
+  @include mixins.respond-to(desktopM) {
+    width: 17%;
+  }
+}

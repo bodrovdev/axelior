@@ -6,7 +6,7 @@ html {
 }
 
 * {
-	box-sizing: border-box;
+	box-sizing: border-box !important;
 	scroll-behavior: smooth;
 }
 
@@ -22,11 +22,10 @@ body {
 	display: flex;
 	flex-direction: column;
 
+	background-color: royalblue;
 	min-height: 100vh;
-	background-color: #D7D7D7;
 
-	// font-family: var(--font-family-default);
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: var(--font-family-default);
 	color: var(--color-black);
 
 	padding: 0 !important;
