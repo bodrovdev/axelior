@@ -1,3 +1,7 @@
 @use "../mixins";
 
-// @include mixins.font-face('Montserrat', normal, 100);
+@include mixins.font-face('Circe', normal, 100);
+@include mixins.font-face('Circe', normal, 300);
+@include mixins.font-face('Circe', normal, 400);
+@include mixins.font-face('Circe', normal, 700);
+@include mixins.font-face('Circe', normal, 800);
