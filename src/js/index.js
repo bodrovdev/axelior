@@ -1,5 +1,22 @@
 import { lock, unlock } from 'tua-body-scroll-lock'
 
+function changeActive(element) {
+    window.addEventListener('load', () => {
+        if (document.querySelector(`.${element}`) === null) {
+            return;
+        }
+        else {
+            const target_elements = document.querySelectorAll(`.${element}`);
+            target_elements.forEach((item) => {
+                item.addEventListener('click', () => {
+                    target_elements.forEach((value) => { value.classList.remove(`${element}--active`) });
+                    item.classList.add(`${element}--active`);
+                })
+            })
+        }
+    })
+}
+
 // --- Модалка с формой
 
 // window.addEventListener('load', () => {

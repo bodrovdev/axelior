@@ -22,10 +22,9 @@ body {
 	display: flex;
 	flex-direction: column;
 
-	background-color: royalblue;
 	min-height: 100vh;
 
-	font-family: var(--font-family-default);
+	font-family: var(--font-family-default) !important;
 	color: var(--color-black);
 
 	padding: 0 !important;
@@ -78,4 +77,14 @@ input[type=number] {
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
 	overflow: hidden;
+}
+
+.hover-blue {
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: var(--color-royal-blue);
+
+		transition: background-color 0.3s;
+	}
 }

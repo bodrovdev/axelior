@@ -13,9 +13,17 @@
   height: 76px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 
-  padding: 0 0 0 30px;
+  padding: 0 0 0 25px;
 
   z-index: 10;
+
+  @include mixins.respond-to(desktopS) {
+    width: 80%;
+  }
+
+  @include mixins.respond-to(desktopD) {
+    width: 83%;
+  }
 
   &__list {
     display: flex;

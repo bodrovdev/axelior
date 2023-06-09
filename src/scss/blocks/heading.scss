@@ -1,23 +1,40 @@
 @use "../mixins";
 
 .index-heading .heading {
+  height: 1px;
   min-height: 520px;
+
+  & .heading__content-bread {
+    display: none;
+  }
+
+  & .heading__content-button {
+    display: flex;
+  }
 }
 
 .heading {
   position: relative;
 
   min-height: 221px;
-  overflow: hidden;
+  overflow: visible;
 
   &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+
     width: 100%;
+    height: 100%;
 
     padding: 0 30px;
   }
 
   &__graphic {
     position: absolute;
+    top: 0;
+    left: 0;
 
     width: 100%;
     height: 100%;
@@ -43,5 +60,48 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(268.29deg, #D9D9D9 25.78%, rgba(217, 217, 217, 0) 85.24%);
+  }
+
+  &__content {
+    position: relative;
+
+    width: 100%;
+
+    margin: auto 0 40px 0;
+
+    z-index: 10;
+  }
+
+  &__content-title {
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 50px;
+    color: var(--color-white);
+  }
+
+  &__content-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    width: 190px;
+    height: 152px;
+    background-color: var(--color-amaranth);
+
+    padding: 30px 25px;
+  }
+
+  &__content-button-text {
+    font-family: var(--font-family-default);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: var(--color-white);
+    text-align: left;
   }
 }
