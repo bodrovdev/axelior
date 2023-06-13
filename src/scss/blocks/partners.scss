@@ -1,0 +1,33 @@
+@use "../mixins";
+
+.partners {
+  padding: 0 30px;
+  margin: 0 0 93px 0;
+
+  &__slider {
+    width: 100%;
+  }
+
+  &__slider-wrapper {
+    @include mixins.respond-to(desktopD) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+  }
+
+  &__slider-slide {
+    width: 150px;
+    height: 75px;
+    filter: grayscale(1);
+
+    transition: filter 0.3s;
+
+    &:hover {
+      filter: grayscale(0);
+
+      transition: filter 0.3s;
+    }
+  }
+}

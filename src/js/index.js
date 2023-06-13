@@ -17,6 +17,8 @@ function changeActive(element) {
     })
 }
 
+changeActive('links__list-item');
+
 // --- Модалка с формой
 
 // window.addEventListener('load', () => {
