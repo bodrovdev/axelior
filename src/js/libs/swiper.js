@@ -28,6 +28,35 @@ let projects_slider = new Swiper(".projects__slider", {
   },
 });
 
+let index_catalogue_slider = new Swiper(".index-catalogue__slider", {
+  direction: "horizontal",
+  spaceBetween: 20,
+  speed: 500,
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: "auto",
+    }
+  },
+
+  navigation: {
+    nextEl: '.index-catalogue__slider-arrow--next',
+    prevEl: '.index-catalogue__slider-arrow--prev',
+  },
+
+  pagination: {
+    el: ".index-catalogue__slider-pagination",
+    type: "progressbar",
+    clickable: true,
+  },
+});
+
 var partners_slider_init = false;
 
 function partners_slider() {

@@ -34,6 +34,11 @@
 
     z-index: 10;
 
+    & .swiper-button-disabled {
+      user-select: none;
+      pointer-events: none;
+    }
+
     & .swiper-button-disabled .projects__slider-arrow-icon {
       filter: invert(78%) sepia(0%) saturate(21%) hue-rotate(171deg) brightness(91%) contrast(82%);
     }
@@ -47,6 +52,8 @@
     width: 60px;
     height: 60px;
     background-color: var(--color-white);
+    border: 1px solid #ACACAC;
+    cursor: pointer;
 
     transition: background-color 0.3s;
 
@@ -54,11 +61,21 @@
       background-color: var(--color-amaranth);
 
       transition: background-color 0.3s;
+
+      & .projects__slider-arrow-icon {
+        filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(276deg) brightness(106%) contrast(103%);
+
+        transition: filter 0.3s;
+      }
     }
 
     &:nth-child(1) {
-      border-right: 1px solid #ACACAC;
+      border-right: none;
     }
+  }
+
+  &__slider-arrow-icon {
+    transition: filter 0.3s;
   }
 
   &__slider-pagination {

@@ -1,7 +1,14 @@
+@use "../mixins";
+
 .page-footer {
+  display: flex;
+  flex-direction: column;
+
   flex-shrink: 0;
 
-  &__nav {
-    display: flex;
+  margin: 0 0 0 auto;
+
+  @include mixins.respond-to(desktopS) {
+    width: 83%;
   }
 }

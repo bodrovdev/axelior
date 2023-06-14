@@ -1,0 +1,8 @@
+@use "../mixins";
+
+.footer-top {
+  display: flex;
+  align-items: center;
+
+  height: 80px;
+}

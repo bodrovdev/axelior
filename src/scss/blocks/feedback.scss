@@ -1,0 +1,87 @@
+@use "../mixins";
+
+.feedback {
+  height: 1px;
+  min-height: 320px;
+
+  padding: 0 30px;
+  margin: 0 0 80px 0;
+
+  &__container {
+    position: relative;
+
+    height: 100%;
+  }
+
+  &__graphic-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 700px;
+    min-height: 265px;
+    background-color: var(--color-white);
+    box-shadow: 0px 9px 29px rgba(0, 0, 0, 0.1);
+
+    padding: 44px 55px 50px 55px;
+  }
+
+  &__content-title {
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 50px;
+    color: var(--color-black);
+
+    margin: 0 0 16px 0;
+  }
+
+  &__content-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  &__content-form-formset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  &__content-form-input {
+    width: 260px;
+    height: 25px;
+    border: none;
+    outline: none;
+    background-color: none;
+    border-bottom: 1px solid #DADADA;
+
+    font-family: var(--font-family-default);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 11px;
+
+    padding: 0 5px 15px 0;
+  }
+
+  &__content-form-submit {
+    background-color: var(--color-amaranth);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-white);
+    white-space: nowrap;
+
+    padding: 16px 46px;
+  }
+}
