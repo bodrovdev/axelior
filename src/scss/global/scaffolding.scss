@@ -80,13 +80,31 @@ input[type=number] {
 }
 
 .hover-blue {
+	position: relative;
+
+	overflow: hidden;
 	cursor: pointer;
 
-	transition: background-color 0.3s;
+	z-index: 1;
 
-	&:hover {
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
 		background-color: var(--color-royal-blue);
 
-		transition: background-color 0.3s;
+		transform: translateX(-150%);
+		transition: transform 0.5s;
+
+		z-index: -1;
+	}
+
+	&:hover::before {
+		transform: translateX(0);
+		transition: transform 0.5s;
 	}
 }

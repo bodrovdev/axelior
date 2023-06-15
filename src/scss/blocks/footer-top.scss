@@ -1,8 +1,54 @@
 @use "../mixins";
 
 .footer-top {
-  display: flex;
-  align-items: center;
-
   height: 80px;
+  border-top: 1px solid #dcdcdc;
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    max-width: 810px;
+    height: 100%;
+  }
+
+  &__tel-link {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+    color: var(--color-black);
+
+    margin: 0 20px 0 0;
+  }
+
+  &__modal-button {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  &__modal-button-text {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+    color: var(--color-amaranth);
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    margin: 0 0 0 auto;
+  }
+
+  &__socials-link {
+    transition: transform 0.1s;
+
+    &:hover {
+      transform: scale(1.4);
+      transition: transform 0.1s;
+    }
+  }
 }

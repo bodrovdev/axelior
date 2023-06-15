@@ -14,20 +14,20 @@
     <div class="index-links">
       <section class="links">
         <ul class="links__list base-list">
-          <li class="links__list-item"><a class="links__list-link links__link--active base-link" href="#">О компании</a></li>
-          <li class="links__list-item"><a class="links__list-link base-link" href="#">Виды работ</a></li>
-          <li class="links__list-item"><a class="links__list-link base-link" href="#">Проекты</a></li>
-          <li class="links__list-item"><a class="links__list-link base-link" href="#">Изделия</a></li>
-          <li class="links__list-item"><a class="links__list-link base-link" href="#">Партнеры</a></li>
+          <li class="links__list-item"><a class="links__list-link links__link--active base-link" href="#about">О компании</a></li>
+          <li class="links__list-item"><a class="links__list-link base-link" href="#services">Виды работ</a></li>
+          <li class="links__list-item"><a class="links__list-link base-link" href="#projects">Проекты</a></li>
+          <li class="links__list-item"><a class="links__list-link base-link" href="#index-catalogue">Изделия</a></li>
+          <li class="links__list-item"><a class="links__list-link base-link" href="#partners">Партнеры</a></li>
         </ul>
       </section>
     </div>
 
-    <div class="index-about">
+    <div class="index-about" id="about">
       @@include('components/_bem/_about.html')
     </div>
 
-    <section class="services">
+    <section class="services" id="services">
       <div class="services__container base-container">
         <h2 class="services__title section-title base-title">Виды работ</h2>
         <div class="services__wrapper">
@@ -71,7 +71,7 @@
       </div>
     </section>
 
-    <section class="projects">
+    <section class="projects" id="projects">
       <div class="projects__container base-container">
         <h2 class="projects__title section-title base-title">Реализованные проекты</h2>
         <div class="projects__slider swiper">
@@ -110,7 +110,7 @@
       </div>
     </section>
 
-    <section class="partners">
+    <section class="partners" id="partners">
       <div class="partners__container base-container">
         <div class="partners__slider swiper">
           <div class="partners__slider-wrapper swiper-wrapper">
@@ -144,7 +144,7 @@
       </div>
     </section>
 
-    <section class="index-catalogue">
+    <section class="index-catalogue" id="index-catalogue">
       <div class="index-catalogue__container base-container">
         <h2 class="index-catalogue__title section-title base-title">Изделия из металла</h2>
         <div class="index-catalogue__slider swiper">
