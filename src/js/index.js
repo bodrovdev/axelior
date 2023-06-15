@@ -19,6 +19,27 @@ function changeActive(element) {
 
 changeActive('links__list-item');
 
+// --- Мобильное меню
+const burger = document.querySelector('#burger');
+const side_menu = document.querySelector('.side-menu');
+const main_content = document.querySelector('.main-content');
+
+const body = document.body;
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('header-nav__burger--active');
+    side_menu.classList.toggle('side-menu--active');
+    main_content.classList.toggle('main-content--active');
+
+    (function () {
+        !main_content.classList.contains('main-content--active') ?
+            lock(main_content) :
+            unlock(main_content);
+    }())
+})
+
+
+
 // --- Модалка с формой
 
 // window.addEventListener('load', () => {
