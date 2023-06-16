@@ -4,4 +4,9 @@
   display: flex;
   align-items: stretch;
   flex-grow: 1;
+
+  @include mixins.respond-to(notDesktop) {
+    position: relative;
+    top: 80px;
+  }
 }

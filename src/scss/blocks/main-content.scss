@@ -4,10 +4,10 @@
   display: flex;
   flex-direction: column;
 
-  transform: translateX(200px);
-  transition: transform 0.3s;
-
   @include mixins.respond-to(notDesktop) {
+    transform: translateX(200px);
+    transition: transform 0.3s;
+
     &--active {
       transform: translateX(0);
       transition: transform 0.3s;

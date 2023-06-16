@@ -7,10 +7,6 @@
   justify-content: flex-start;
 
   background-color: var(--color-white);
-
-  transform: translateX(-200px);
-  transition: transform 0.3s;
-
   padding: 30px 0 30px 32px;
 
   @include mixins.respond-to(notDesktop) {
@@ -19,10 +15,13 @@
     box-sizing: border-box;
     width: 200px;
     max-width: 200px;
-    height: 100%;
+    height: calc(100% - 80px);
     overflow-y: auto;
 
-    padding: 10px;
+    transform: translateX(-200px);
+    transition: transform 0.3s;
+
+    padding: 30px 10px;
 
     &--active {
       transform: translateX(0);
@@ -33,7 +32,6 @@
   @include mixins.respond-to(desktopM) {
     width: 17%;
   }
-
 
 
   &__logo-link {
@@ -106,14 +104,28 @@
   &__main-nav-select {
     position: relative;
 
-    &:hover {
-      & .side-menu__main-nav-sublist {
-        opacity: 1;
 
-        transform: translate(0, -50%);
-        pointer-events: all;
+    @include mixins.respond-to(notDesktop) {
+      display: flex;
+      flex-direction: column;
 
-        transition: opacity 0.3s, transform 0.3s;
+      &--active {
+        & .side-menu__main-nav-sublist {
+          display: flex;
+        }
+      }
+    }
+
+    @include mixins.respond-to(desktopS) {
+      &:hover {
+        & .side-menu__main-nav-sublist {
+          opacity: 1;
+
+          transform: translate(0, -50%);
+          pointer-events: all;
+
+          transition: opacity 0.3s, transform 0.3s;
+        }
       }
     }
   }
@@ -140,6 +152,21 @@
     padding: 10px 15px;
 
     z-index: 10;
+
+    @include mixins.respond-to(notDesktop) {
+      position: relative;
+      top: auto;
+      left: auto;
+
+      display: none;
+
+      min-width: auto;
+      opacity: 1;
+
+      transform: none;
+
+      margin: 15px 0 0 0;
+    }
   }
 
   &__main-nav-subitem {
@@ -210,6 +237,12 @@
     gap: 5px;
 
     padding: 0 30px 0 0;
+
+    @include mixins.respond-to(notDesktop) {
+      & .side-menu__contacts-item {
+        display: flex;
+      }
+    }
   }
 
   &__tel-link {
@@ -243,5 +276,33 @@
     font-size: 13px;
     line-height: 130%;
     color: var(--color-amaranth);
+  }
+
+  &__contacts-item {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    @include mixins.respond-to(notDesktop) {
+      &:nth-child(1) {
+        display: none;
+      }
+
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  &__contacts-item-text {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+    color: var(--color-white);
+
+    @include mixins.respond-to(notDesktop) {
+      color: var(--color-black) !important;
+    }
   }
 }

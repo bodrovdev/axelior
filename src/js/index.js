@@ -6,7 +6,8 @@ function changeActive(element) {
             return;
         }
         else {
-            const target_elements = document.querySelectorAll(`.${element}`);
+            let target_elements = document.querySelectorAll(`.${element}`);
+
             target_elements.forEach((item) => {
                 item.addEventListener('click', () => {
                     target_elements.forEach((value) => { value.classList.remove(`${element}--active`) });
@@ -17,14 +18,34 @@ function changeActive(element) {
     })
 }
 
+function toggleByClick(element) {
+    window.addEventListener('load', () => {
+        if (document.querySelector(`.${element}`) === null) {
+            return;
+        }
+        else {
+            let target_elements = document.querySelectorAll(`.${element}`);
+
+            document.addEventListener('click', (e) => {
+                target_elements.forEach((item) => {
+                    if (!item.contains(e.target)) {
+                        item.classList.remove(`${element}--active`);
+                    }
+                })
+            })
+        }
+    })
+};
+
 changeActive('links__list-item');
+
+changeActive('side-menu__main-nav-select');
+toggleByClick('side-menu__main-nav-select');
 
 // --- Мобильное меню
 const burger = document.querySelector('#burger');
 const side_menu = document.querySelector('.side-menu');
 const main_content = document.querySelector('.main-content');
-
-const body = document.body;
 
 burger.addEventListener('click', () => {
     burger.classList.toggle('header-nav__burger--active');
