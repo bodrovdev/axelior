@@ -2,6 +2,10 @@
 
 .index-links {
   margin: 0 0 80px 0;
+
+  @include mixins.respond-to(notDesktop) {
+    margin: 0;
+  }
 }
 
 .links {
@@ -13,6 +17,10 @@
   background-color: #F9F9F9;
 
   padding: 0 0 0 30px;
+
+  @include mixins.respond-to(notDesktop) {
+    display: none;
+  }
 
   &__list {
     display: flex;

@@ -3,6 +3,10 @@
 .index-about {
   margin: 0 0 80px 0;
 
+  @include mixins.respond-to(notDesktop) {
+    margin: 40px 0 0 0;
+  }
+
   & .about__content {
     margin: 0;
   }
@@ -14,6 +18,13 @@
 
 .about {
   padding: 0 30px;
+
+  @include mixins.respond-to(notDesktop) {
+    width: 90%;
+
+    padding: 0;
+    margin: 0 5%;
+  }
 
   &__container {
     display: flex;
@@ -33,6 +44,11 @@
     color: #000000;
 
     margin: 0 0 20px 0;
+
+    @include mixins.respond-to(notDesktop) {
+      font-weight: 500;
+      line-height: 130%;
+    }
   }
 
   &__content {
@@ -42,6 +58,11 @@
     max-width: 840px;
 
     margin: 0 0 60px 0;
+
+    @include mixins.respond-to(notDesktop) {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 
   &__content-item {
@@ -53,6 +74,12 @@
     font-size: 13px;
     line-height: 21px;
     color: #000000;
+
+    @include mixins.respond-to(notDesktop) {
+      max-width: 100%;
+
+      font-size: 16px;
+    }
   }
 
   &__graphic {

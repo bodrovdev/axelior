@@ -4,11 +4,21 @@
   padding: 0 30px;
   margin: 0 0 68px 0;
 
+  @include mixins.respond-to(notDesktop) {
+    padding: 0;
+    margin: 40px 0 0 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 27px;
+
+    @include mixins.respond-to(notDesktop) {
+      width: 90%;
+      margin: 0 5%;
+    }
   }
 
   &__wrapper {
@@ -16,11 +26,39 @@
     grid-template: repeat(2, auto) / repeat(3, 1fr);
     grid-auto-flow: row;
     gap: 40px;
+
+    @include mixins.respond-to(notDesktop) {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
   }
 
   &__wrapper-item {
     display: flex;
     align-items: center;
     gap: 25px;
+
+    @include mixins.respond-to(notDesktop) {
+      flex-direction: column;
+      justify-content: flex-start;
+
+      width: 130px;
+    }
+  }
+
+  &__wrapper-item-icon {
+    @include mixins.respond-to(notDesktop) {
+      min-width: 46px;
+      min-height: 46px;
+    }
+  }
+
+  &__wrapper-item-text {
+    @include mixins.respond-to(notDesktop) {
+      text-align: center;
+    }
   }
 }

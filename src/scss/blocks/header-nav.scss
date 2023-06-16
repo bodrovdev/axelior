@@ -99,11 +99,12 @@
   @include mixins.respond-to(notDesktop) {
     justify-content: space-between;
 
-    width: 100%;
+    width: 90%;
     height: 80px;
     background-color: var(--color-white);
 
-    padding: 0 5%;
+    padding: 0;
+    margin: 0 5%;
   }
 
   @include mixins.respond-to(desktopS) {
@@ -118,6 +119,10 @@
     display: flex;
     align-items: center;
     gap: 30px;
+
+    @include mixins.respond-to(notDesktop) {
+      display: none;
+    }
   }
 
   &__list-item {
@@ -125,16 +130,6 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-
-    @include mixins.respond-to(notDesktop) {
-      &:nth-child(1) {
-        display: none;
-      }
-
-      &:nth-child(2) {
-        display: none;
-      }
-    }
   }
 
   &__list-item-text {
@@ -189,6 +184,14 @@
     }
   }
 
+  &__mobile-logo {
+    display: none;
+
+    @include mixins.respond-to(notDesktop) {
+      display: flex;
+    }
+  }
+
   &__burger {
     display: none;
     align-items: center;
@@ -201,14 +204,12 @@
 
     z-index: 20;
 
+    @include mixins.respond-to(notDesktop) {
+      display: flex;
+    }
+
     @include mixins.respond-to(desktopS) {
       cursor: pointer;
-    }
-  }
-
-  @media (min-width:320px) and (max-width:1599px) {
-    &__burger {
-      display: flex;
     }
   }
 

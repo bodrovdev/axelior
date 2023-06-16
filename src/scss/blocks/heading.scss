@@ -4,12 +4,20 @@
   height: 1px;
   min-height: 520px;
 
+  @include mixins.respond-to(notDesktop) {
+    min-height: 350px;
+  }
+
   & .heading__content-bread {
     display: none;
   }
 
   & .heading__content-button {
     display: flex;
+
+    @include mixins.respond-to(notDesktop) {
+      display: none;
+    }
   }
 }
 
@@ -54,6 +62,14 @@
     background: #ff3535;
     opacity: 0.15;
     filter: blur(100px);
+
+    @include mixins.respond-to(notDesktop) {
+      top: 0;
+      left: 0;
+
+      width: 50%;
+      height: 50%;
+    }
   }
 
   &__graphic-gradient {
@@ -77,6 +93,10 @@
     font-size: 42px;
     line-height: 50px;
     color: var(--color-white);
+
+    @include mixins.respond-to(notDesktop) {
+      line-height: 110%;
+    }
   }
 
   &__content-button {

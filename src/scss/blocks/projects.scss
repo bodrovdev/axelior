@@ -4,10 +4,23 @@
   padding: 0 30px;
   margin: 0 0 100px 0;
 
+  @include mixins.respond-to(notDesktop) {
+    padding: 0;
+    margin: 40px 0 0 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
     gap: 27px;
+
+    @include mixins.respond-to(notDesktop) {
+      gap: 20px;
+
+      width: 90%;
+
+      margin: 0 5%;
+    }
   }
 
   &__slider {
@@ -18,6 +31,12 @@
 
   &__slider-slide {
     width: 100%;
+  }
+
+  &__slider-slide-img {
+    @include mixins.respond-to(notDesktop) {
+      height: 400px;
+    }
   }
 
   &__slider-arrows {

@@ -41,6 +41,10 @@
     height: fit-content;
 
     margin: 0 0 70px 0;
+
+    @include mixins.respond-to(notDesktop) {
+      display: none;
+    }
   }
 
   &__logo-icon {
@@ -58,6 +62,10 @@
     width: 100%;
 
     margin: 0 0 165px 0;
+
+    @include mixins.respond-to(notDesktop) {
+      margin: 0 0 60px 0;
+    }
 
     & .current_page_item .side-menu__main-nav-link {
       &::before {
@@ -239,6 +247,8 @@
     padding: 0 30px 0 0;
 
     @include mixins.respond-to(notDesktop) {
+      gap: 15px;
+
       & .side-menu__contacts-item {
         display: flex;
       }
@@ -259,6 +269,10 @@
       color: var(--color-amaranth);
 
       transition: color 0.1s;
+    }
+
+    @include mixins.respond-to(notDesktop) {
+      font-size: 18px;
     }
   }
 

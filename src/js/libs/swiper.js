@@ -2,29 +2,11 @@ import Swiper from 'swiper/bundle';
 
 let projects_slider = new Swiper(".projects__slider", {
   direction: "horizontal",
-  spaceBetween: 0,
   speed: 1500,
-
-  breakpoints: {
-    320: {
-      slidesPerView: 1
-    },
-    768: {
-      slidesPerView: 2,
-    },
-    1024: {
-      slidesPerView: "auto",
-    }
-  },
 
   navigation: {
     nextEl: '.projects__slider-arrow--next',
     prevEl: '.projects__slider-arrow--prev',
-  },
-
-  pagination: {
-    el: ".projects__slider-pagination",
-    clickable: true,
   },
 });
 
@@ -80,8 +62,8 @@ function partners_slider() {
         },
 
         pagination: {
-          el: ".partners-slider__pagination",
-          clickable: true,
+          el: ".partners__slider-pagination",
+          type: "progressbar",
         },
       });
     }
