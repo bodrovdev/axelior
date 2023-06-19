@@ -1,0 +1,22 @@
+@@include('components/_base/_base-header.html')
+
+<main class="page-content">
+  @@include('components/_bem/_side-menu.html')
+  <div class="main-content main-content--active" style="overflow: hidden;">
+    @@include('components/_bem/_heading.html', {
+    "bg": "heading-bg-about.png",
+    "current": "О компании",
+    "title": "О компании",
+    })
+
+    <section class="links">
+      <ul class="links__list base-list">
+        <li class="links__list-item"><a class="links__list-link links__link--active base-link" href="#about">О компании</a></li>
+        <li class="links__list-item"><a class="links__list-link base-link" href="#services">Виды работ</a></li>
+        <li class="links__list-item"><a class="links__list-link base-link" href="#services">Виды работ</a></li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+@@include('components/_base/_base-footer.html')

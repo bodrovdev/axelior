@@ -8,6 +8,10 @@
 
   margin: 0 0 0 auto;
 
+  @include mixins.respond-to(notDesktop) {
+    margin: 40px 0 0 0;
+  }
+
   @include mixins.respond-to(desktopS) {
     width: 83%;
   }
