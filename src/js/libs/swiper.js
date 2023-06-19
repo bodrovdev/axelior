@@ -75,6 +75,32 @@ function partners_slider() {
 partners_slider();
 window.addEventListener("resize", partners_slider);
 
+var letters_slider_init = false;
+
+function letters_slider() {
+  if (window.innerWidth <= 1365) {
+    if (!letters_slider_init) {
+      letters_slider_init = true;
+      var letters_slider = new Swiper(".about-page-letters__slider", {
+        direction: "horizontal",
+        spaceBetween: 46,
+        slidesPerView: "auto",
+
+        pagination: {
+          el: ".about-page-letters__slider-pagination",
+          type: "progressbar",
+          clickable: true,
+        },
+      });
+    }
+  } else if (letters_slider_init) {
+    letters_slider.destroy();
+    letters_slider_init = false;
+  }
+}
+letters_slider();
+window.addEventListener("resize", letters_slider);
+
 // var mobile_slider_init = false;
 
 // function mobile_slider() {

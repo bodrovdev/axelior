@@ -1,0 +1,87 @@
+@use "../mixins";
+
+.about-page-letters {
+  padding: 0 30px;
+  margin: 80px 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 27px;
+
+    max-width: initial;
+  }
+
+  &__slider {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &__slider-wrapper {
+    margin: 0 0 30px 0;
+
+    @include mixins.respond-to(desktopM) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 46px;
+
+      margin: 0;
+    }
+  }
+
+  &__slider-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 250px;
+    height: 340px;
+    border: 1px solid #EEEDED;
+
+    padding: 15px;
+  }
+
+  &__slider-slide-img {
+    width: 220px;
+    height: 311px;
+    object-fit: cover;
+  }
+
+  &__slider-pagination {
+    display: none;
+  }
+
+  & .swiper-pagination-progressbar {
+    box-sizing: border-box !important;
+    height: 6px !important;
+    background: #D9D9D9 !important;
+    border: 2px solid #D9D9D9 !important;
+    border-radius: 500px !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  & .swiper-pagination-progressbar-fill {
+    box-sizing: border-box !important;
+    background: #ED2266 !important;
+    border-radius: 500px !important;
+
+    margin: 0 !important;
+  }
+
+  @media (min-width: 320px) and (max-width: 1365px) {
+    &__slider-pagination {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+
+      display: flex;
+
+      width: 90% !important;
+      margin: 0 auto !important;
+    }
+  }
+}

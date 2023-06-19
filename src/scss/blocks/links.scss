@@ -1,12 +1,6 @@
 @use "../mixins";
 
-.index-links {
-  margin: 0 0 80px 0;
-
-  @include mixins.respond-to(notDesktop) {
-    margin: 0;
-  }
-}
+.index-links {}
 
 .links {
   display: flex;

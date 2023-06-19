@@ -5,6 +5,8 @@
   flex-direction: column;
 
   @include mixins.respond-to(notDesktop) {
+    width: 100%;
+
     transform: translateX(200px);
     transition: transform 0.3s;
 

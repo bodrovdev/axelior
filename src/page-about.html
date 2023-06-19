@@ -12,9 +12,77 @@
     <section class="links">
       <ul class="links__list base-list">
         <li class="links__list-item"><a class="links__list-link links__link--active base-link" href="#about">О компании</a></li>
-        <li class="links__list-item"><a class="links__list-link base-link" href="#services">Виды работ</a></li>
-        <li class="links__list-item"><a class="links__list-link base-link" href="#services">Виды работ</a></li>
+        <li class="links__list-item"><a class="links__list-link base-link" href="#features">Преимущества</a></li>
+        <li class="links__list-item"><a class="links__list-link base-link" href="#letters">Благодарственные письма</a></li>
       </ul>
+    </section>
+
+    @@include('components/_bem/_about.html')
+
+    <section class="about-page-features" id="features">
+      <div class="about-page-features__container">
+        <h2 class="about-page-features__title section-title base-title">Преимущества</h2>
+        <div class="about-page-features__wrapper">
+          <div class="about-page-features__wrapper-item">
+            <svg class="about-page-features__wrapper-item-icon" width="56" height="56" aria-hidden="true">
+              <use href="img/icon/sprite.svg#about-features1-icon"></use>
+            </svg>
+            <h3 class="about-page-features__wrapper-item-title base-title">Современные решения</h3>
+            <p class="about-page-features__wrapper-item-text base-par">
+              Применяем современные решения оптимизации инвестиционных и эксплуатационных затрат
+            </p>
+          </div>
+          <div class="about-page-features__wrapper-item">
+            <svg class="about-page-features__wrapper-item-icon" width="56" height="56" aria-hidden="true">
+              <use href="img/icon/sprite.svg#about-features2-icon"></use>
+            </svg>
+            <h3 class="about-page-features__wrapper-item-title base-title">Опытные специалисты</h3>
+            <p class="about-page-features__wrapper-item-text base-par">
+              Опыт специалистов в сфере энергоэффективности и экологичности зданий более 10 лет
+            </p>
+          </div>
+          <div class="about-page-features__wrapper-item">
+            <svg class="about-page-features__wrapper-item-icon" width="56" height="56" aria-hidden="true">
+              <use href="img/icon/sprite.svg#about-features3-icon"></use>
+            </svg>
+            <h3 class="about-page-features__wrapper-item-title base-title">Достоверные расчет сроков</h3>
+            <p class="about-page-features__wrapper-item-text base-par">
+              Предоставляем достоверный расчет сроков с гарантией 100%
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-page-letters">
+      <div class="about-page-letters__container base-container">
+        <h2 class="about-page-letters__title section-title base-title">Благодарственные письма</h2>
+        <div class="about-page-letters__slider swiper">
+          <div class="about-page-letters__slider-wrapper swiper-wrapper">
+            <a class="about-page-letters__slider-slide swiper-slide base-link" data-fancybox href="img/image/about-letters-1.png">
+              <figure class="about-page-letters__slider-slide-image base-figure">
+                <img class="about-page-letters__slider-slide-img" src="img/image/about-letters-1.png" width="220" height="311" alt="#">
+              </figure>
+            </a>
+            <a class="about-page-letters__slider-slide swiper-slide base-link" data-fancybox href="img/image/about-letters-1.png">
+              <figure class="about-page-letters__slider-slide-image base-figure">
+                <img class="about-page-letters__slider-slide-img" src="img/image/about-letters-1.png" width="220" height="311" alt="#">
+              </figure>
+            </a>
+            <a class="about-page-letters__slider-slide swiper-slide base-link" data-fancybox href="img/image/about-letters-1.png">
+              <figure class="about-page-letters__slider-slide-image base-figure">
+                <img class="about-page-letters__slider-slide-img" src="img/image/about-letters-1.png" width="220" height="311" alt="#">
+              </figure>
+            </a>
+            <a class="about-page-letters__slider-slide swiper-slide base-link" data-fancybox href="img/image/about-letters-1.png">
+              <figure class="about-page-letters__slider-slide-image base-figure">
+                <img class="about-page-letters__slider-slide-img" src="img/image/about-letters-1.png" width="220" height="311" alt="#">
+              </figure>
+            </a>
+          </div>
+          <div class="about-page-letters__slider-pagination swiper-pagination"></div>
+        </div>
+      </div>
     </section>
   </div>
 </main>

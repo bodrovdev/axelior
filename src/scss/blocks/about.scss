@@ -1,10 +1,10 @@
 @use "../mixins";
 
 .index-about {
-  margin: 0 0 80px 0;
+  margin: 80px 0;
 
-  @include mixins.respond-to(notDesktop) {
-    margin: 40px 0 0 0;
+  .about {
+    margin: 0;
   }
 
   & .about__content {
@@ -14,16 +14,31 @@
   & .about__graphic {
     display: none;
   }
+
+  @include mixins.respond-to(notDesktop) {
+    margin: 40px 0 0 0;
+
+    & .about {
+      margin: 0 5%;
+    }
+  }
+
+  @include mixins.respond-to(desktopS) {
+    & .about {
+      margin: 0;
+    }
+  }
 }
 
 .about {
   padding: 0 30px;
+  margin: 60px 0 80px 0;
 
   @include mixins.respond-to(notDesktop) {
     width: 90%;
 
     padding: 0;
-    margin: 0 5%;
+    margin: 40px 5%;
   }
 
   &__container {
@@ -48,6 +63,8 @@
     @include mixins.respond-to(notDesktop) {
       font-weight: 500;
       line-height: 130%;
+
+      margin: 0 0 30px 0;
     }
   }
 
@@ -62,6 +79,8 @@
     @include mixins.respond-to(notDesktop) {
       flex-direction: column;
       gap: 10px;
+
+      margin: 0 0 20px 0;
     }
   }
 
@@ -83,7 +102,46 @@
   }
 
   &__graphic {
-    display: flex;
-    gap: 30px;
+    @include mixins.respond-to(notDesktop) {
+      width: 100%;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      display: grid;
+      grid-template: 1fr / repeat(3, 1fr);
+      gap: 30px;
+    }
+  }
+
+  @include mixins.respond-to(notDesktop) {
+    &__image:nth-child(1) {
+      width: 100%;
+
+      & .about__img {
+        width: 100%;
+        max-height: 315px;
+        object-fit: cover;
+      }
+    }
+
+    &__image:nth-child(2) {
+      display: none;
+    }
+
+    &__image:nth-child(3) {
+      display: none;
+    }
+  }
+
+  &__img {
+    @include mixins.respond-to(desktopS) {
+      width: 100%;
+      height: auto;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      width: 360px;
+      height: 315px;
+    }
   }
 }

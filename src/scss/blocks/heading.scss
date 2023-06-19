@@ -169,6 +169,10 @@
 
   &__content-bread-home,
   .heading__content-bread-current {
+    display: inline-block;
+
+    width: fit-content;
+
     font-weight: 400;
     font-size: 13px;
     line-height: 16px;
