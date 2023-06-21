@@ -108,3 +108,12 @@ input[type=number] {
 		transition: transform 0.5s;
 	}
 }
+
+.body-container {
+	position: relative;
+
+	width: 100%;
+	max-width: 1440px;
+
+	margin: 0 auto;
+}

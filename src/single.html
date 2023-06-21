@@ -1,0 +1,32 @@
+@@include('components/_base/_base-header.html')
+
+<main class="page-content" id="page-single">
+  @@include('components/_bem/_side-menu.html')
+  <div class="main-content main-content--active" style="overflow: hidden;">
+    @@include('components/_bem/_heading.html', {
+    "bg": "heading-bg-archive.png",
+    "middle": "Изделия из металла",
+    "current": "Сварная сетка арматура, проволока",
+    "title": "Сварная сетка арматура, проволока",
+    })
+
+    <section class="single">
+      <div class="single__container base-container">
+        <figure class="single__column single__column--left base-figure">
+          <img class="single__column-img" src="img/image/single.png" widht="400" height="400" alt="#">
+        </figure>
+        <div class="single__column single__column--right">
+          <div class="single__column-text">
+            <p>
+              Мы - компания, специализирующаяся на поставке и монтаже в первую очередь инженерных систем, а во вторую - строительстве. Одновременно с этим есть несколько сопутствующих направлений деятельности компании.
+            </p>
+          </div>
+          <button class="single__column-button modal-with-form__button hover-blue base-button" type="button">получить консультацию</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+@@include('components/_base/_base-footer.html')
