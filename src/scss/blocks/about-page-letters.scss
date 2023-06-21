@@ -20,11 +20,12 @@
 
   &__slider-wrapper {
     margin: 0 0 30px 0;
+  }
 
-    @include mixins.respond-to(desktopM) {
+  @media (min-width: 1600px) {
+    &__slider-wrapper {
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 46px;
 
       margin: 0;
