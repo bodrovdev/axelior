@@ -59,6 +59,50 @@ burger.addEventListener('click', () => {
     }())
 })
 
+// --- Переход к табам при загрузке на странице категорий
+window.addEventListener('load', () => {
+    if (document.querySelector('#page-categories') === null) {
+        return;
+    }
+    else {
+        function changeById(id, elements) {
+            elements.forEach((item) => {
+                if (item.dataset.tab === id) {
+                    elements.forEach((value) => {
+                        value.classList.remove(`${value.classList[0]}--active`);
+                    })
+                    item.classList.add(`${item.classList[0]}--active`);
+                }
+            })
+        }
+
+        let current_tab = window.location.hash.split('#')[1];
+        let tabs_buttons = document.querySelectorAll('.links__list-item');
+        let tabs_content = document.querySelectorAll('.page-categories__tabs-content-item');
+
+        (function () {
+            changeById(current_tab, tabs_buttons);
+            changeById(current_tab, tabs_content);
+        }())
+
+        // - Смена табов по клику
+        tabs_buttons.forEach((button_item) => {
+            button_item.addEventListener('click', () => {
+                tabs_buttons.forEach((button_value) => { button_value.classList.remove((`${button_value.classList[0]}--active`)) });
+                button_item.classList.add(`${button_item.classList[0]}--active`);
+
+                tabs_content.forEach((content_item) => {
+                    if (button_item.dataset.tab === content_item.dataset.tab) {
+                        tabs_content.forEach((content_value) => { content_value.classList.remove(`${content_value.classList[0]}--active`) });
+                        content_item.classList.add(`${content_item.classList[0]}--active`);
+                    }
+                })
+
+            })
+        })
+    }
+})
+
 
 
 // --- Модалка с формой

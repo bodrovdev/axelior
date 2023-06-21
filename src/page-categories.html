@@ -1,0 +1,37 @@
+@@include('components/_base/_base-header.html')
+
+<main class="page-content" id="page-categories">
+  @@include('components/_bem/_side-menu.html')
+  <div class="main-content main-content--active" style="overflow: hidden;">
+    @@include('components/_bem/_heading.html', {
+    "bg": "heading-bg-categories.png",
+    "current": "Виды работ",
+    "title": "Виды работ",
+    })
+
+    <section class="links">
+      <ul class="links__list base-list">
+        <li class="links__list-item links__list-item--active" data-tab="1"><span class="links__list-link base-link">Проектирование</span></li>
+        <li class="links__list-item" data-tab="2"><span class="links__list-link base-link">Алмазное бурение</span></li>
+        <li class="links__list-item" data-tab="3"><span class="links__list-link base-link">Алмазное сверление</span></li>
+      </ul>
+    </section>
+
+    <section class="page-categories__tabs-content">
+      <div class="page-categories__tabs-content-item page-categories__tabs-content-item--active" data-tab="1">
+        <div class="page-categories__item-graphic"></div>
+        <figure class="page-categories__item-image base-figure">
+          <img class="page-categories__item-img" src="img/image/categories1.png" width="555" height="302" alt="#">
+        </figure>
+        <span class="page-categories__item-info">
+          Внутренние
+          инженерные сети
+        </span>
+      </div>
+      <div class="page-categories__tabs-content-item" data-tab="2">2</div>
+      <div class="page-categories__tabs-content-item" data-tab="3">3</div>
+    </section>
+  </div>
+</main>
+
+@@include('components/_base/_base-footer.html')

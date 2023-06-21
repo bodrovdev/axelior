@@ -1,0 +1,13 @@
+@use "../mixins";
+
+.page-categories {
+  &__container {}
+
+  &__tabs-content-item {
+    display: none;
+
+    &--active {
+      display: flex;
+    }
+  }
+}

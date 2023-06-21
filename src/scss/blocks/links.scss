@@ -47,6 +47,8 @@
 
     &:hover {
       & .links__list-link {
+        cursor: pointer;
+
         color: var(--color-amaranth);
 
         transition: color 0.1s;
