@@ -1,0 +1,16 @@
+@@include('components/_base/_base-header.html')
+
+<main class="page-content">
+  @@include('components/_bem/_side-menu.html')
+  <div class="main-content main-content--active" style="overflow: hidden;">
+    <div class="contacts-heading">
+      @@include('components/_bem/_heading.html', {
+      "bg": "heading-bg-about.png",
+      "current": "Контакты",
+      "title": "Контакты",
+      })
+    </div>
+  </div>
+</main>
+
+@@include('components/_base/_base-footer.html')

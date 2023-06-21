@@ -78,7 +78,7 @@ window.addEventListener("resize", partners_slider);
 var letters_slider_init = false;
 
 function letters_slider() {
-  if (window.innerWidth <= 1365) {
+  if (window.innerWidth <= 1599) {
     if (!letters_slider_init) {
       letters_slider_init = true;
       var letters_slider = new Swiper(".about-page-letters__slider", {
