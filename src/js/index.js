@@ -1,4 +1,21 @@
-import { lock, unlock } from 'tua-body-scroll-lock'
+import { lock, unlock } from 'tua-body-scroll-lock';
+
+// --- Мобильное меню
+const burger = document.querySelector('#burger');
+const side_menu = document.querySelector('.side-menu');
+const main_content = document.querySelector('.main-content');
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('header-nav__burger--active');
+    side_menu.classList.toggle('side-menu--active');
+    main_content.classList.toggle('main-content--active');
+
+    (function () {
+        !main_content.classList.contains('main-content--active') ?
+            lock(main_content) :
+            unlock(main_content);
+    }())
+})
 
 function changeActive(element) {
     window.addEventListener('load', () => {
@@ -38,27 +55,58 @@ function toggleByClick(element) {
 };
 
 changeActive('links__list-item');
-
 changeActive('side-menu__main-nav-select');
 toggleByClick('side-menu__main-nav-select');
 
-// --- Мобильное меню
-const burger = document.querySelector('#burger');
-const side_menu = document.querySelector('.side-menu');
-const main_content = document.querySelector('.main-content');
+// --- Табы на странице категорий
+window.addEventListener('load', () => {
+    if (document.querySelector('#page-categories') === null) {
+        return;
+    }
+    else {
+        // - Переход к табам при загрузке на странице категорий, или при изменении хэша страница
+        let tabs_buttons = document.querySelectorAll('.links__list-item');
+        let tabs_content = document.querySelectorAll('.page-categories__tabs-content');
 
-burger.addEventListener('click', () => {
-    burger.classList.toggle('header-nav__burger--active');
-    side_menu.classList.toggle('side-menu--active');
-    main_content.classList.toggle('main-content--active');
+        function tabs() {
+            function changeById(id, elements) {
+                elements.forEach((item) => {
+                    if (item.dataset.tab === id) {
+                        elements.forEach((value) => {
+                            value.classList.remove(`${value.classList[0]}--active`);
+                        })
+                        item.classList.add(`${item.classList[0]}--active`);
+                    }
+                })
+            }
 
-    (function () {
-        !main_content.classList.contains('main-content--active') ?
-            lock(main_content) :
-            unlock(main_content);
-    }())
+            (function () {
+                changeById(window.location.hash.split('#')[1], tabs_buttons);
+                changeById(window.location.hash.split('#')[1], tabs_content);
+            }())
+        }
+
+        window.addEventListener('load', () => { tabs(); });
+        window.addEventListener('hashchange', () => { tabs() });
+
+
+        // - Смена табов по клику
+        tabs_buttons.forEach((button_item) => {
+            button_item.addEventListener('click', () => {
+                tabs_buttons.forEach((button_value) => { button_value.classList.remove((`${button_value.classList[0]}--active`)) });
+                button_item.classList.add(`${button_item.classList[0]}--active`);
+
+                tabs_content.forEach((content_item) => {
+                    if (button_item.dataset.tab === content_item.dataset.tab) {
+                        tabs_content.forEach((content_value) => { content_value.classList.remove(`${content_value.classList[0]}--active`) });
+                        content_item.classList.add(`${content_item.classList[0]}--active`);
+                    }
+                })
+
+            })
+        })
+    }
 })
-
 
 
 // --- Модалка с формой
@@ -78,33 +126,33 @@ burger.addEventListener('click', () => {
 //       unlock(modal_with_form);
 //     }
 
-    // - Открытие модалки на нажатие кнопки
+// - Открытие модалки на нажатие кнопки
 
-    // modal_with_form_buttons.forEach((button) => {
-    //   button.addEventListener('click', () => {
-    //     modal_with_form.classList.add('modal-form--active');
-    //     lock(modal_with_form);
-    //   })
-    // })
+// modal_with_form_buttons.forEach((button) => {
+//   button.addEventListener('click', () => {
+//     modal_with_form.classList.add('modal-form--active');
+//     lock(modal_with_form);
+//   })
+// })
 
-    // - Закрытие модалки по нажатию крестика
+// - Закрытие модалки по нажатию крестика
 
-    // modal_with_form_close.addEventListener('click', () => {
-    //   closeFormModal();
-    // })
+// modal_with_form_close.addEventListener('click', () => {
+//   closeFormModal();
+// })
 
-    // - Закрытие модалки по нажатию на пустое место
+// - Закрытие модалки по нажатию на пустое место
 
-    // modal_with_form.addEventListener('click', (e) => {
-    //   if (e.target !== e.currentTarget) {
-    //     return;
-    //   }
-    //   else {
-    //     closeFormModal();
-    //   }
-    // })
+// modal_with_form.addEventListener('click', (e) => {
+//   if (e.target !== e.currentTarget) {
+//     return;
+//   }
+//   else {
+//     closeFormModal();
+//   }
+// })
 
-    // - Подтверждение отправки модалки
+// - Подтверждение отправки модалки
 
 //     modal_with_form_formset.addEventListener('submit', (e) => {
 //       e.preventDefault();
