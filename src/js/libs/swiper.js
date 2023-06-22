@@ -101,6 +101,35 @@ function letters_slider() {
 letters_slider();
 window.addEventListener("resize", letters_slider);
 
+let thumb_project_slider = new Swiper(".page-projects__thumb-slider", {
+  spaceBetween: 15,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+
+var project_slider = new Swiper(".page-projects__slider", {
+  spaceBetween: 0,
+
+  thumbs: {
+    swiper: thumb_project_slider,
+  },
+});
+
+// --- Оставшееся количество слайдов на странице проектов
+// window.addEventListener('load', () => {
+//   if (document.querySelector('.page-projects__slider') === null) {
+//     return;
+//   }
+//   else {
+//     const visible_thumb_slides = document.querySelector('.page-projects__thumb-slider-wrapper').querySelectorAll('.swiper-slide-visible');
+
+//     thumb_project_slider.on('slideChange', () => {
+//       console.log(Array.from(visible_thumb_slides).slice(-1)[0].getAttribute('aria-label'));
+//     });
+//   }
+// })
+
 // var mobile_slider_init = false;
 
 // function mobile_slider() {
@@ -136,3 +165,14 @@ window.addEventListener("resize", letters_slider);
 // }
 // mobile_slider();
 // window.addEventListener("resize", mobile_slider);
+
+// page - projects__thumb - slider - slide
+// swiper - slide
+// swiper - slide - visible
+// swiper - slide - active
+// swiper - slide - thumb - active
+
+// page-projects__thumb-slider-slide
+// swiper-slide
+// swiper-slide-visible
+// swiper-slide-next

@@ -134,11 +134,11 @@
       display: flex;
       flex-direction: column;
 
-      &--active {
-        & .side-menu__main-nav-sublist {
-          display: flex;
-        }
-      }
+      // &--active {
+      //   & .side-menu__main-nav-sublist {
+      //     display: flex;
+      //   }
+      // }
     }
 
     @include mixins.respond-to(desktopS) {
@@ -179,18 +179,18 @@
     z-index: 100;
 
     @include mixins.respond-to(notDesktop) {
-      position: relative;
-      top: auto;
-      left: auto;
+      // position: relative;
+      // top: auto;
+      // left: auto;
 
       display: none;
 
-      min-width: auto;
-      opacity: 1;
+      // min-width: auto;
+      // opacity: 1;
 
-      transform: none;
+      // transform: none;
 
-      margin: 15px 0 0 0;
+      // margin: 15px 0 0 0;
     }
   }
 

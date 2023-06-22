@@ -1,0 +1,87 @@
+@use "../mixins";
+
+.page-contacts {
+  &__info-wrapper {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+
+    width: fit-content;
+
+    margin: 30px 0 0 0;
+
+    &--mobile {
+      display: none !important;
+
+      @include mixins.respond-to(notDesktop) {
+        display: flex !important;
+        gap: 0;
+
+        width: 100%;
+      }
+    }
+  }
+
+  &__info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 21px;
+
+    width: 340px;
+    border: 1px solid #EEEDED;
+    background: var(--color-white);
+
+    padding: 30px;
+
+    @include mixins.respond-to(notDesktop) {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #EEEDED;
+
+      padding: 20px 5%;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    & a {
+      transition: color 0.3s;
+
+      &:hover {
+        color: var(--color-amaranth);
+
+        transition: color 0.3s;
+      }
+    }
+  }
+
+  &__info-item-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  &__info-item-caption {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 130%;
+    color: #7E7D7D;
+    text-transform: uppercase;
+  }
+
+  &__info-item-content {
+    display: inline-block;
+
+    max-width: 220px;
+
+    @include mixins.respond-to(notDesktop) {
+      max-width: none;
+    }
+  }
+}

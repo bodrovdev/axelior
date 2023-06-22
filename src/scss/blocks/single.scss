@@ -25,11 +25,25 @@
   }
 
   &__column {
+    &--left {
+      @include mixins.respond-to(notDesktop) {
+        width: 100%;
+      }
+    }
+
     &--right {
       display: flex;
       align-items: flex-start;
       flex-direction: column;
       gap: 30px;
+    }
+  }
+
+  &__column-img {
+    @include mixins.respond-to(notDesktop) {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
     }
   }
 

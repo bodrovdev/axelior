@@ -1,0 +1,144 @@
+@use "../mixins";
+
+.page-projects {
+  padding: 0 30px;
+  margin: 60px 0 80px 0;
+
+  @include mixins.respond-to(notDesktop) {
+    padding: 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 63px;
+
+    @include mixins.respond-to(notDesktop) {
+      width: 90%;
+
+      margin: 0 5%;
+    }
+  }
+
+  &__slider-block {
+    max-width: 100%;
+  }
+
+  &__slider {
+    max-width: 100%;
+
+    margin: 0 0 20px 0;
+  }
+
+  &__slider-slide {
+    max-width: 100%;
+  }
+
+  &__slide-img {
+    @include mixins.respond-to(notDesktop) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__thumb-slider {
+    width: fit-content;
+    max-width: 356px;
+
+    padding: 5px;
+    margin: 0 auto 0 0;
+
+    & .swiper-slide-thumb-active {
+      outline: 1px solid var(--color-amaranth);
+      outline-offset: 3px;
+    }
+  }
+
+  &__thumb-slider-slide {
+    width: 75px !important;
+    height: 75px !important;
+
+    & .page-projects__slide-num {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      display: none;
+
+      user-select: none;
+      pointer-events: none;
+
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 30px;
+      color: var(--color-white);
+
+      transform: translate(-50%, -50%);
+
+      z-index: 3;
+    }
+
+    &--num {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        background-color: #151515;
+        opacity: 0.7;
+        user-select: none;
+        pointer-events: none;
+
+        z-index: 1;
+      }
+
+      & .page-projects__slide-num {
+        display: block;
+      }
+    }
+  }
+
+  &__description {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 95px;
+  }
+
+  &__description-title {
+    display: inline-block;
+
+    width: 346px;
+
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 42px;
+    color: var(--color-black);
+  }
+
+  &__description-text {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & p {
+      display: inline-block;
+
+      max-width: 455px;
+
+      font-size: 13px;
+      line-height: 25px;
+      color: var(--color-black);
+
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

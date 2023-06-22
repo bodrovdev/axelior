@@ -3,6 +3,7 @@ import { lock, unlock } from 'tua-body-scroll-lock';
 // --- Мобильное меню
 const burger = document.querySelector('#burger');
 const side_menu = document.querySelector('.side-menu');
+const side_menu_links = document.querySelectorAll('.side-menu__main-nav-link');
 const main_content = document.querySelector('.main-content');
 
 burger.addEventListener('click', () => {
@@ -15,6 +16,19 @@ burger.addEventListener('click', () => {
             lock(main_content) :
             unlock(main_content);
     }())
+})
+
+side_menu_links.forEach((link) => {
+    link.addEventListener('click', () => {
+
+        if (window.innerWidth <= 1023) {
+            burger.classList.toggle('header-nav__burger--active');
+            side_menu.classList.toggle('side-menu--active');
+            main_content.classList.toggle('main-content--active');
+
+            unlock(main_content);
+        }
+    })
 })
 
 function changeActive(element) {
@@ -54,8 +68,13 @@ function toggleByClick(element) {
     })
 };
 
+// --- Смена активного класса в блоке ссылок на всех страницах
 changeActive('links__list-item');
+
+// --- Смена активного класса в селектах в боковом меню
 changeActive('side-menu__main-nav-select');
+
+// --- Сброс активного класса при клике на пустое место в селектах в боковом меню
 toggleByClick('side-menu__main-nav-select');
 
 // --- Табы на странице категорий
