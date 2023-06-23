@@ -15,35 +15,51 @@
 </head>
 
 <body>
-  <div class="body-container">
+  <div class="body-container" style="overflow: hidden;">
 
-    <!-- <div class="modal-with-form" id="modal_with_form">
-    <div class="modal-with-form__wrapper">
-      <button class="modal-with-form__close follow-change base-button" id="modal_with_form_close">
-        <svg class="modal-with-form__close-icon" width="20" height="20" alt="#">
-          <use href="img/icon/sprite.svg#modal-close-icon"></use>
-        </svg>
-      </button>
-      <div class="modal-with-form__inner">
-      </div>
-      <div class="modal-with-form__success">
-        <span class="modal-with-form__success-text">Спасибо, ваша заявка отправлена!</span>
+    <div class="modal-with-form" id="modal_with_form">
+      <div class="modal-with-form__wrapper">
+        <button class="modal-with-form__close follow-change base-button" id="modal_with_form_close">
+          <svg class="modal-with-form__close-icon" width="20" height="20" alt="#">
+            <use href="img/icon/sprite.svg#modal-close-icon"></use>
+          </svg>
+        </button>
+        <div class="modal-with-form__inner">
+          <div class="feedback__content">
+            <h2 class="feedback__content-title base-title">Наш инженер вам перезвонит</h2>
+            <form class="feedback__content-form" id="modal_with_form_formset">
+              <div class="feedback__content-form-formset">
+                <input class="feedback__content-form-input" type="text" placeholder="Как вас зовут">
+                <input class="feedback__content-form-input" type="tel" placeholder="Номер телефона">
+              </div>
+              <div class="feedback__content-form-formset">
+                <button class="feedback__content-form-submit hover-blue base-button" type="submit">отправить инженеру</button>
+                <p class="feedback__content-form-caption base-par">
+                  Нажимая на кнопку, вы даете согласие
+                  на <a class="feedback__form-caption-link base-link">обработку персональных данных</a>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-with-form__success">
+          <span class="modal-with-form__success-text">Спасибо, ваша заявка отправлена!</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="modal-without-form" id="modal_without_form">
-    <div class="modal-without-form__wrapper">
-      <button class="modal-without-form__close follow-change base-button" id="modal_without_form_close">
-        <svg class="modal-without-form__close-icon" width="20" height="20" alt="#">
-          <use href="img/icon/sprite.svg#modal-close-icon"></use>
-        </svg>
-      </button>
-      <div class="modal-without-form__success">
-        <span class="modal-without-form__success-text">Спасибо, ваша заявка отправлена!</span>
+    <div class="modal-without-form" id="modal_without_form">
+      <div class="modal-without-form__wrapper">
+        <button class="modal-without-form__close follow-change base-button" id="modal_without_form_close">
+          <svg class="modal-without-form__close-icon" width="20" height="20" alt="#">
+            <use href="img/icon/sprite.svg#modal-close-icon"></use>
+          </svg>
+        </button>
+        <div class="modal-without-form__success">
+          <span class="modal-without-form__success-text">Спасибо, ваша заявка отправлена!</span>
+        </div>
       </div>
     </div>
-  </div> -->
 
     <header class="page-header">
       <div class="header-nav">
@@ -61,7 +77,7 @@
             <a class="header-nav__list-item-text base-link" href="mailto:info@axelior.ru">info@axelior.ru</a>
           </li>
           <li class="header-nav__list-item">
-            <button class="header-nav__list-item-button modal-with-form__button hover-blue base-button" type="button">
+            <button class="header-nav__list-item-button hover-blue base-button" type="button">
               <span class="header-nav__item-button-text">Online-звонок инженеру</span>
             </button>
           </li>
@@ -140,6 +156,9 @@
           <a class="side-menu__main-nav-link base-link" href="page-projects.html">Реализованные проекты</a>
         </li>
         <li class="side-menu__main-nav-item">
+          <a class="side-menu__main-nav-link base-link" href="archive-news.html">Новости</a>
+        </li>
+        <li class="side-menu__main-nav-item">
           <a class="side-menu__main-nav-link base-link" href="page-contacts.html">Контакты</a>
         </li>
       </ul>
@@ -190,11 +209,11 @@
     <div class="heading__content">
       <div class="heading__content-bread">
         <a class="heading__content-bread-home base-link" href="index.html">Главная</a>
-        <a class="heading__content-bread-middle base-link" href="archive.html">@@middle</a>
+        <a class="heading__content-bread-middle base-link" href="@@middle_link">@@middle</a>
         <span class="heading__content-bread-current">Контакты</span>
       </div>
       <h2 class="heading__content-title base-title">Контакты</h2>
-      <button class="heading__content-button hover-blue base-button" type="button">
+      <button class="heading__content-button modal-with-form__button hover-blue base-button" type="button">
         <span class="heading__content-button-text">Консультация инженера</span>
         <svg class="heading__content-button-icon" width="20" height="20" aria-hidden="true">
           <use href="img/icon/sprite.svg#phone2-icon"></use>
