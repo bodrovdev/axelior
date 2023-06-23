@@ -1,0 +1,127 @@
+@use "../mixins";
+
+.single-news {
+  padding: 0 30px;
+  margin: 60px 0 80px 0;
+
+  @include mixins.respond-to(notDesktop) {
+    padding: 0;
+    margin: 30px 0 40px 0;
+  }
+
+  &__container {
+    @include mixins.respond-to(notDesktop) {
+      width: 90%;
+
+      margin: 0 5%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 400px;
+
+    margin: 0 0 40px 0;
+  }
+
+  &__img {
+    width: 100%;
+    height: 400px;
+    max-height: 400px;
+    object-fit: cover;
+  }
+
+  &__title {
+    display: inline-block;
+
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 42px;
+    color: var(--color-black);
+
+    margin: 0 0 40px 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    max-width: 700px;
+
+    & p {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 25px;
+      color: var(--color-black);
+
+      padding: 0;
+      margin: 0;
+    }
+
+    & ul {
+      list-style: none;
+
+      padding: 0;
+      margin: 0;
+
+      & li {
+        position: relative;
+
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 25px;
+        color: var(--color-black);
+
+        padding: 0 0 0 20px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 8px;
+
+          width: 3px;
+          height: 3px;
+          background-color: var(--color-black);
+          border-radius: 50%;
+
+          transform: translateY(-50%);
+
+          @include mixins.respond-to(notDesktop) {
+            top: 9px;
+
+            width: 5px;
+            height: 5px;
+
+            transform: none;
+          }
+        }
+      }
+    }
+
+    & span {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 25px;
+      color: var(--color-black);
+    }
+
+    & h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 25px;
+      color: var(--color-black);
+    }
+
+    & a {
+      color: var(--color-amaranth);
+      text-decoration: underline;
+    }
+  }
+}

@@ -86,6 +86,15 @@ function letters_slider() {
         spaceBetween: 46,
         slidesPerView: "auto",
 
+        breakpoints: {
+          320: {
+            slidesPerView: "auto",
+          },
+          1439: {
+            slidesPerView: 4,
+          }
+        },
+
         pagination: {
           el: ".about-page-letters__slider-pagination",
           type: "progressbar",
@@ -101,34 +110,65 @@ function letters_slider() {
 letters_slider();
 window.addEventListener("resize", letters_slider);
 
-let thumb_project_slider = new Swiper(".page-projects__thumb-slider", {
+let thumb_page_project_slider = new Swiper(".page-projects__thumb-slider", {
   spaceBetween: 15,
-  slidesPerView: 4,
   freeMode: true,
   watchSlidesProgress: true,
+
+  breakpoints: {
+    320: {
+      slidesPerView: 3
+    },
+    1024: {
+      slidesPerView: 4,
+    }
+  },
 });
 
-var project_slider = new Swiper(".page-projects__slider", {
+let page_project_slider = new Swiper(".page-projects__slider", {
   spaceBetween: 0,
 
   thumbs: {
-    swiper: thumb_project_slider,
+    swiper: thumb_page_project_slider,
   },
 });
 
 // --- Оставшееся количество слайдов на странице проектов
-// window.addEventListener('load', () => {
-//   if (document.querySelector('.page-projects__slider') === null) {
-//     return;
-//   }
-//   else {
-//     const visible_thumb_slides = document.querySelector('.page-projects__thumb-slider-wrapper').querySelectorAll('.swiper-slide-visible');
+window.addEventListener('load', () => {
+  if (document.querySelector('.page-projects__slider') === null) {
+    return;
+  }
+  else {
+    function changeNumSlide() {
+      let visible_thumb_slides = document.querySelector('.page-projects__thumb-slider-wrapper').querySelectorAll('.swiper-slide-visible');
+      let last_visible_thumb = Array.from(visible_thumb_slides).slice(-1)[0];
+      let thumb_result = last_visible_thumb.getAttribute('aria-label').split(' / ')[1] - last_visible_thumb.getAttribute('aria-label').split(' / ')[0];
 
-//     thumb_project_slider.on('slideChange', () => {
-//       console.log(Array.from(visible_thumb_slides).slice(-1)[0].getAttribute('aria-label'));
-//     });
-//   }
-// })
+      if (thumb_result) {
+        visible_thumb_slides.forEach((slide) => {
+          slide.classList.remove('page-projects__thumb-slider-slide--num');
+        })
+        last_visible_thumb.classList.add('page-projects__thumb-slider-slide--num');
+        last_visible_thumb.querySelector('.page-projects__slide-num').textContent = `+${thumb_result}`;
+      }
+      else {
+        visible_thumb_slides.forEach((slide) => {
+          slide.classList.remove('page-projects__thumb-slider-slide--num');
+        })
+      }
+    }
+
+    window.addEventListener('load', changeNumSlide());
+
+    page_project_slider.on('slideChange', () => {
+      changeNumSlide();
+    });
+    thumb_page_project_slider.on('slideChange', () => {
+      changeNumSlide();
+    });
+
+  }
+})
 
 // var mobile_slider_init = false;
 

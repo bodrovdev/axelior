@@ -41,7 +41,15 @@
     height: 340px;
     border: 1px solid #EEEDED;
 
+    transition: border 0.3s;
+
     padding: 15px;
+
+    &:hover {
+      border: 1px solid var(--color-amaranth);
+
+      transition: border 0.3s;
+    }
   }
 
   &__slider-slide-img {

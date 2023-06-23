@@ -130,6 +130,16 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+
+    & a {
+      transition: color 0.3s;
+
+      &:hover {
+        color: var(--color-amaranth);
+
+        transition: color 0.3s;
+      }
+    }
   }
 
   &__list-item-text {

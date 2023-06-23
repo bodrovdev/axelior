@@ -129,54 +129,90 @@ window.addEventListener('load', () => {
 
 
 // --- Модалка с формой
+window.addEventListener('load', () => {
+    if (document.querySelector('#modal_with_form') === null) {
+        return;
+    }
+    else {
+        let modal_with_form = document.getElementById('modal_with_form');
+        let modal_with_form_close = document.getElementById('modal_with_form_close');
+        let modal_with_form_buttons = document.querySelectorAll('.modal-with-form__button');
+        let modal_with_form_formset = document.getElementById('modal_with_form_formset');
 
-// window.addEventListener('load', () => {
-//   if (document.querySelector('#modal_with_form') === null) {
-//     return;
-//   }
-//   else {
-//     let modal_with_form = document.getElementById('modal_with_form');
-//     let modal_with_form_close = document.getElementById('modal_with_form_close');
-//     let modal_with_form_buttons = document.querySelectorAll('.page-button');
-//     let modal_with_form_formset = document.getElementById('modal_with_form_formset');
+        function closeFormModal() {
+            modal_with_form.classList.remove('modal-with-form--active');
+            unlock(modal_with_form);
+        }
 
-//     function closeFormModal() {
-//       modal_with_form.classList.remove('modal-form--active');
-//       unlock(modal_with_form);
-//     }
+        // - Открытие модалки на нажатие кнопки
+        modal_with_form_buttons.forEach((button) => {
+            button.addEventListener('click', () => {
+                modal_with_form.classList.add('modal-with-form--active');
+                lock(modal_with_form);
+            })
+        })
 
-// - Открытие модалки на нажатие кнопки
+        // - Закрытие модалки по нажатию крестика
+        modal_with_form_close.addEventListener('click', () => {
+            closeFormModal();
+        })
 
-// modal_with_form_buttons.forEach((button) => {
-//   button.addEventListener('click', () => {
-//     modal_with_form.classList.add('modal-form--active');
-//     lock(modal_with_form);
-//   })
-// })
+        // - Закрытие модалки по нажатию на пустое место
+        modal_with_form.addEventListener('click', (e) => {
+            if (e.target !== e.currentTarget) {
+                return;
+            }
+            else {
+                closeFormModal();
+            }
+        })
 
-// - Закрытие модалки по нажатию крестика
+        // - Подтверждение отправки модалки
+        modal_with_form_formset.addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.querySelector('.modal-with-form__inner').classList.add('modal-with-form__inner--hidden');
+            document.querySelector('.modal-with-form__success').classList.add('modal-with-form__success--active');
+        })
+    }
+})
 
-// modal_with_form_close.addEventListener('click', () => {
-//   closeFormModal();
-// })
+// --- Модалка без формы
+window.addEventListener('load', () => {
+    if (document.getElementById('modal_without_form') === null) {
+        return;
+    }
+    else {
+        const modal_without_form = document.getElementById('modal_without_form');
+        const modal_without_form_close = document.getElementById('modal_without_form_close');
+        const modal_without_form_formset = document.querySelectorAll('.modal-without-form__formset');
 
-// - Закрытие модалки по нажатию на пустое место
+        function closeWithoutFormModal() {
+            modal_without_form.classList.remove('modal-without-form--active');
+            unlock(modal_without_form);
+        }
 
-// modal_with_form.addEventListener('click', (e) => {
-//   if (e.target !== e.currentTarget) {
-//     return;
-//   }
-//   else {
-//     closeFormModal();
-//   }
-// })
+        // - Появление модалки без формы на событие отправка формы
+        modal_without_form_formset.forEach((form) => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                modal_without_form.classList.add('modal-without-form--active');
+                lock(modal_without_form);
+            })
+        });
 
-// - Подтверждение отправки модалки
+        // - Закрытие модалки без формы по нажатию крестика
+        modal_without_form_close.addEventListener('click', () => {
+            closeWithoutFormModal();
+        })
 
-//     modal_with_form_formset.addEventListener('submit', (e) => {
-//       e.preventDefault();
-//       document.querySelector('.modal-form__inner').classList.add('modal-form__inner--hidden');
-//       document.querySelector('.modal-form__success').classList.add('modal-form__success--active');
-//     })
-//   }
-// })
+        // - Закрытие модалки без формы по нажатию на пустое место
+        modal_without_form.addEventListener('click', (e) => {
+            if (e.target !== e.currentTarget) {
+                return;
+            }
+            else {
+                closeWithoutFormModal();
+            }
+        })
+    }
+})

@@ -37,13 +37,31 @@
     line-height: 130%;
     color: var(--color-black);
 
+    transition: color 0.3s;
+
     margin: 0 20px 0 0;
+
+    &:hover {
+      color: var(--color-amaranth);
+
+      transition: color 0.3s;
+    }
   }
 
   &__modal-button {
     display: flex;
     align-items: center;
     gap: 7px;
+
+    cursor: pointer;
+
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s;
+    }
+
   }
 
   &__modal-button-text {
