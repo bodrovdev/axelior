@@ -2,7 +2,6 @@
 
 .index-heading {
   & .heading {
-    height: 1px;
     min-height: 520px;
 
     @include mixins.respond-to(notDesktop) {
@@ -59,7 +58,6 @@
 
 .contacts-heading {
   & .heading {
-    height: 1px;
     min-height: 780px;
     background: none;
 
@@ -159,6 +157,7 @@
 .heading {
   position: relative;
 
+  height: 1px;
   min-height: 221px;
   overflow: visible;
 
