@@ -15,90 +15,89 @@
 </head>
 
 <body>
-  <div class="body-container" style="overflow: hidden;">
-
-    <div class="modal-with-form" id="modal_with_form">
-      <div class="modal-with-form__wrapper">
-        <button class="modal-with-form__close follow-change base-button" id="modal_with_form_close">
-          <svg class="modal-with-form__close-icon" width="20" height="20" alt="#">
-            <use href="img/icon/sprite.svg#modal-close-icon"></use>
-          </svg>
-        </button>
-        <div class="modal-with-form__inner">
-          <div class="feedback__content">
-            <h2 class="feedback__content-title base-title">Наш инженер вам перезвонит</h2>
-            <form class="feedback__content-form" id="modal_with_form_formset">
-              <div class="feedback__content-form-formset">
-                <input class="feedback__content-form-input" type="text" placeholder="Как вас зовут" required>
-                <input class="feedback__content-form-input" type="tel" placeholder="Номер телефона" required>
-              </div>
-              <div class="feedback__content-form-formset">
-                <button class="feedback__content-form-submit hover-blue base-button" type="submit">отправить инженеру</button>
-                <p class="feedback__content-form-caption base-par">
-                  Нажимая на кнопку, вы даете согласие
-                  на <a class="feedback__form-caption-link base-link">обработку персональных данных</a>
-                </p>
-              </div>
-            </form>
-          </div>
+  <div class="modal-with-form" id="modal_with_form">
+    <div class="modal-with-form__wrapper">
+      <button class="modal-with-form__close follow-change base-button" id="modal_with_form_close">
+        <svg class="modal-with-form__close-icon" width="20" height="20" alt="#">
+          <use href="img/icon/sprite.svg#modal-close-icon"></use>
+        </svg>
+      </button>
+      <div class="modal-with-form__inner">
+        <div class="feedback__content">
+          <h2 class="feedback__content-title base-title">Наш инженер вам перезвонит</h2>
+          <form class="feedback__content-form" id="modal_with_form_formset">
+            <div class="feedback__content-form-formset">
+              <input class="feedback__content-form-input" type="text" placeholder="Как вас зовут" required>
+              <input class="feedback__content-form-input" type="tel" placeholder="Номер телефона" required>
+            </div>
+            <div class="feedback__content-form-formset">
+              <button class="feedback__content-form-submit hover-blue base-button" type="submit">отправить инженеру</button>
+              <p class="feedback__content-form-caption base-par">
+                Нажимая на кнопку, вы даете согласие
+                на <a class="feedback__form-caption-link base-link">обработку персональных данных</a>
+              </p>
+            </div>
+          </form>
         </div>
-        <div class="modal-with-form__success">
-          <span class="modal-with-form__success-text">Спасибо, ваша заявка отправлена!</span>
-        </div>
+      </div>
+      <div class="modal-with-form__success">
+        <span class="modal-with-form__success-text">Спасибо, ваша заявка отправлена!</span>
       </div>
     </div>
+  </div>
 
-    <div class="modal-without-form" id="modal_without_form">
-      <div class="modal-without-form__wrapper">
-        <button class="modal-without-form__close follow-change base-button" id="modal_without_form_close">
-          <svg class="modal-without-form__close-icon" width="20" height="20" alt="#">
-            <use href="img/icon/sprite.svg#modal-close-icon"></use>
-          </svg>
-        </button>
-        <div class="modal-without-form__success">
-          <span class="modal-without-form__success-text">Спасибо, ваша заявка отправлена!</span>
-        </div>
+  <div class="modal-without-form" id="modal_without_form">
+    <div class="modal-without-form__wrapper">
+      <button class="modal-without-form__close follow-change base-button" id="modal_without_form_close">
+        <svg class="modal-without-form__close-icon" width="20" height="20" alt="#">
+          <use href="img/icon/sprite.svg#modal-close-icon"></use>
+        </svg>
+      </button>
+      <div class="modal-without-form__success">
+        <span class="modal-without-form__success-text">Спасибо, ваша заявка отправлена!</span>
       </div>
     </div>
+  </div>
 
-    <header class="page-header">
-      <div class="header-nav">
-        <ul class="header-nav__list base-list">
-          <li class="header-nav__list-item">
-            <svg class="header-nav__list-item-icon" width="13" height="16" aria-hidden="true">
-              <use href="img/icon/sprite.svg#location-icon"></use>
-            </svg>
-            <span class="header-nav__list-item-text">г. Москва, 115432, проспект Верндаского, 18 к3</span>
-          </li>
-          <li class="header-nav__list-item">
-            <svg class="header-nav__list-item-icon" width="16" height="13" aria-hidden="true">
-              <use href="img/icon/sprite.svg#email-icon"></use>
-            </svg>
-            <a class="header-nav__list-item-text base-link" href="mailto:info@axelior.ru">info@axelior.ru</a>
-          </li>
-          <li class="header-nav__list-item">
-            <button class="header-nav__list-item-button hover-blue base-button" type="button">
-              <span class="header-nav__item-button-text">Online-звонок инженеру</span>
-            </button>
-          </li>
-        </ul>
-
-        <a class="header-nav__mobile-logo base-link" href="index.html">
-          <svg class="side-menu__logo-icon" width="166" height="46" aria-hidden="true">
-            <use href="img/icon/sprite.svg#logo-icon"></use>
+  <header class="page-header">
+    <div class="header-nav">
+      <ul class="header-nav__list base-list">
+        <li class="header-nav__list-item">
+          <svg class="header-nav__list-item-icon" width="13" height="16" aria-hidden="true">
+            <use href="img/icon/sprite.svg#location-icon"></use>
           </svg>
-        </a>
+          <span class="header-nav__list-item-text">г. Москва, 115432, проспект Верндаского, 18 к3</span>
+        </li>
+        <li class="header-nav__list-item">
+          <svg class="header-nav__list-item-icon" width="16" height="13" aria-hidden="true">
+            <use href="img/icon/sprite.svg#email-icon"></use>
+          </svg>
+          <a class="header-nav__list-item-text base-link" href="mailto:info@axelior.ru">info@axelior.ru</a>
+        </li>
+        <li class="header-nav__list-item">
+          <button class="header-nav__list-item-button hover-blue base-button" type="button">
+            <span class="header-nav__item-button-text">Online-звонок инженеру</span>
+          </button>
+        </li>
+      </ul>
 
-        <button class="header-nav__burger base-button" id="burger">
-          <span class="header-nav__burger-line"></span>
-        </button>
-      </div>
+      <a class="header-nav__mobile-logo base-link" href="index.html">
+        <svg class="side-menu__logo-icon" width="166" height="46" aria-hidden="true">
+          <use href="img/icon/sprite.svg#logo-icon"></use>
+        </svg>
+      </a>
+
+      <button class="header-nav__burger base-button" id="burger">
+        <span class="header-nav__burger-line"></span>
+      </button>
+    </div>
 
 
-    </header>
+  </header>
 
 <main class="page-content" id="page-single">
   <nav class="side-menu">
+
   <a class="side-menu__logo-link base-link" href="index.html">
     <svg class="side-menu__logo-icon" width="166" height="46" aria-hidden="true">
       <use href="img/icon/sprite.svg#logo-icon"></use>
@@ -106,83 +105,81 @@
   </a>
 
   <nav class="side-menu__main-nav">
-    <div class="side-menu__main-nav-wrapper">
-      <ul class="side-menu__main-nav-list base-list">
-        <li class="side-menu__main-nav-item current_page_item">
-          <a class="side-menu__main-nav-link base-link" href="index.html">Главная</a>
-        </li>
-        <li class="side-menu__main-nav-item">
-          <a class="side-menu__main-nav-link base-link" href="page-about.html">О компании</a>
-        </li>
-        <li class="side-menu__main-nav-item side-menu__main-nav-select">
-          <a class="side-menu__main-nav-link page-categories-link base-link" href="page-categories.html#1">Проектирование</a>
-          <ul class="side-menu__main-nav-sublist base-list">
-            <li class="side-menu__main-nav-subitem">
-              <a class="side-menu__main-nav-sublink base-link" href="page-categories.html">
-                Противопожарное проектирование</a>
-            </li>
-            <li class="side-menu__main-nav-subitem">
-              <a class="side-menu__main-nav-sublink base-link" href="page-categories.html">
-                Проектирование «Свето-прозрачных конструкций»
-              </a>
-            </li>
-            <li class="side-menu__main-nav-subitem">
-              <a class="side-menu__main-nav-sublink base-link" href="page-categories.html">
-                Стено-резочные машины
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="side-menu__main-nav-item side-menu__main-nav-select">
-          <a class="side-menu__main-nav-link page-categories-link base-link" href="page-categories.html#2">Алмазное бурение</a>
-          <ul class="side-menu__main-nav-sublist base-list">
-            <li class="side-menu__main-nav-subitem">
-              <a class="side-menu__main-nav-sublink base-link" href="page-categories.html">
-                Резка
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="side-menu__main-nav-item">
-          <a class="side-menu__main-nav-link page-categories-link base-link" href="page-categories.html#3">Алмазное сверление</a>
-        </li>
-        <li class="side-menu__main-nav-item">
-          <a class="side-menu__main-nav-link base-link" href="archive.html">Изделия из металла</a>
-        </li>
-        <li class="side-menu__main-nav-item">
-          <a class="side-menu__main-nav-link base-link" href="archive.html">Поставка оборудования</a>
-        </li>
-        <li class="side-menu__main-nav-item">
-          <a class="side-menu__main-nav-link base-link" href="page-projects.html">Реализованные проекты</a>
-        </li>
-        <li class="side-menu__main-nav-item">
-          <a class="side-menu__main-nav-link base-link" href="archive-news.html">Новости</a>
-        </li>
-        <li class="side-menu__main-nav-item">
-          <a class="side-menu__main-nav-link base-link" href="page-contacts.html">Контакты</a>
-        </li>
-      </ul>
+    <ul class="side-menu__main-nav-list base-list">
+      <li class="side-menu__main-nav-item current_page_item">
+        <a class="side-menu__main-nav-link base-link" href="index.html">Главная</a>
+      </li>
+      <li class="side-menu__main-nav-item">
+        <a class="side-menu__main-nav-link base-link" href="page-about.html">О компании</a>
+      </li>
+      <li class="side-menu__main-nav-item side-menu__main-nav-select">
+        <a class="side-menu__main-nav-link page-categories-link base-link" href="page-categories.html#1">Проектирование</a>
+        <ul class="side-menu__main-nav-sublist base-list">
+          <li class="side-menu__main-nav-subitem">
+            <a class="side-menu__main-nav-sublink base-link" href="page-categories.html">
+              Противопожарное проектирование</a>
+          </li>
+          <li class="side-menu__main-nav-subitem">
+            <a class="side-menu__main-nav-sublink base-link" href="page-categories.html">
+              Проектирование «Свето-прозрачных конструкций»
+            </a>
+          </li>
+          <li class="side-menu__main-nav-subitem">
+            <a class="side-menu__main-nav-sublink base-link" href="page-categories.html">
+              Стено-резочные машины
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="side-menu__main-nav-item side-menu__main-nav-select">
+        <a class="side-menu__main-nav-link page-categories-link base-link" href="page-categories.html#2">Алмазное бурение</a>
+        <ul class="side-menu__main-nav-sublist base-list">
+          <li class="side-menu__main-nav-subitem">
+            <a class="side-menu__main-nav-sublink base-link" href="page-categories.html">
+              Резка
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="side-menu__main-nav-item">
+        <a class="side-menu__main-nav-link page-categories-link base-link" href="page-categories.html#3">Алмазное сверление</a>
+      </li>
+      <li class="side-menu__main-nav-item">
+        <a class="side-menu__main-nav-link base-link" href="archive.html">Изделия из металла</a>
+      </li>
+      <li class="side-menu__main-nav-item">
+        <a class="side-menu__main-nav-link base-link" href="archive.html">Поставка оборудования</a>
+      </li>
+      <li class="side-menu__main-nav-item">
+        <a class="side-menu__main-nav-link base-link" href="page-projects.html">Реализованные проекты</a>
+      </li>
+      <li class="side-menu__main-nav-item">
+        <a class="side-menu__main-nav-link base-link" href="archive-news.html">Новости</a>
+      </li>
+      <li class="side-menu__main-nav-item">
+        <a class="side-menu__main-nav-link base-link" href="page-contacts.html">Контакты</a>
+      </li>
+    </ul>
 
-      <div class="side-menu__contacts">
-        <a class="side-menu__tel-link base-link" href="tel:+7 (495) 150-00-00">+7 (495) 150-00-00</a>
-        <button class="side-menu__button modal-with-form__button base-button" type="button">
-          <svg class="side-menu__button-icon" width="10" height="13" aria-hidden="true">
-            <use href="img/icon/sprite.svg#phone-icon"></use>
-          </svg>
-          <span class="side-menu__button-text">Перезвонить вам?</span>
-        </button>
-        <div class="side-menu__contacts-item">
-          <svg class="side-menu__contacts-item-icon" width="13" height="16" aria-hidden="true">
-            <use href="img/icon/sprite.svg#location-icon"></use>
-          </svg>
-          <span class="side-menu__contacts-item-text">г. Москва, 115432, проспект Верндаского, 18 к3</span>
-        </div>
-        <div class="side-menu__contacts-item">
-          <svg class="side-menu__contacts-item-icon" width="16" height="13" aria-hidden="true">
-            <use href="img/icon/sprite.svg#email-icon"></use>
-          </svg>
-          <a class="side-menu__contacts-item-text base-link" href="mailto:info@axelior.ru">info@axelior.ru</a>
-        </div>
+    <div class="side-menu__contacts">
+      <a class="side-menu__tel-link base-link" href="tel:+7 (495) 150-00-00">+7 (495) 150-00-00</a>
+      <button class="side-menu__button modal-with-form__button base-button" type="button">
+        <svg class="side-menu__button-icon" width="10" height="13" aria-hidden="true">
+          <use href="img/icon/sprite.svg#phone-icon"></use>
+        </svg>
+        <span class="side-menu__button-text">Перезвонить вам?</span>
+      </button>
+      <div class="side-menu__contacts-item">
+        <svg class="side-menu__contacts-item-icon" width="13" height="16" aria-hidden="true">
+          <use href="img/icon/sprite.svg#location-icon"></use>
+        </svg>
+        <span class="side-menu__contacts-item-text">г. Москва, 115432, проспект Верндаского, 18 к3</span>
+      </div>
+      <div class="side-menu__contacts-item">
+        <svg class="side-menu__contacts-item-icon" width="16" height="13" aria-hidden="true">
+          <use href="img/icon/sprite.svg#email-icon"></use>
+        </svg>
+        <a class="side-menu__contacts-item-text base-link" href="mailto:info@axelior.ru">info@axelior.ru</a>
       </div>
     </div>
   </nav>
@@ -419,7 +416,6 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="js/index.min.js?v=1.0"></script>
 
-</div>
 </body>
 
 </html>
