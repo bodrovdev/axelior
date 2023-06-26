@@ -51,12 +51,26 @@
   }
 
   &__slider-wrapper {
-    // @include mixins.respond-to(desktopD) {
-    //   display: flex;
-    //   align-items: center;
-    //   justify-content: center;
-    //   gap: 40px;
-    // }
+    @include mixins.respond-to(desktopD) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    @include mixins.respond-to(notDesktop) {
+      width: 100%;
+      overflow-x: auto;
+
+      padding: 0 0 40px 0;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      width: 100%;
+      overflow-x: auto;
+
+      padding: 0 0 40px 0;
+    }
   }
 
   &__slider-slide {
@@ -79,6 +93,18 @@
 
       height: auto;
       filter: none;
+    }
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      width: 50%;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      width: 25%;
     }
   }
 

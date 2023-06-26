@@ -2,7 +2,6 @@ import Swiper from 'swiper/bundle';
 
 let projects_slider = new Swiper(".projects__slider", {
   direction: "horizontal",
-  speed: 1500,
 
   navigation: {
     nextEl: '.projects__slider-arrow--next',
@@ -39,27 +38,27 @@ let index_catalogue_slider = new Swiper(".index-catalogue__slider", {
   },
 });
 
-let partners_slider = new Swiper(".partners__slider", {
-  direction: "horizontal",
-  spaceBetween: 40,
+// let partners_slider = new Swiper(".partners__slider", {
+//   direction: "horizontal",
+//   spaceBetween: 40,
 
-  breakpoints: {
-    320: {
-      slidesPerView: 1
-    },
-    768: {
-      slidesPerView: 2,
-    },
-    1024: {
-      slidesPerView: "auto",
-    }
-  },
+//   breakpoints: {
+//     320: {
+//       slidesPerView: 1
+//     },
+//     768: {
+//       slidesPerView: 2,
+//     },
+//     1024: {
+//       slidesPerView: "auto",
+//     }
+//   },
 
-  pagination: {
-    el: ".partners__slider-pagination",
-    type: "progressbar",
-  },
-});
+//   pagination: {
+//     el: ".partners__slider-pagination",
+//     type: "progressbar",
+//   },
+// });
 
 var letters_slider_init = false;
 
