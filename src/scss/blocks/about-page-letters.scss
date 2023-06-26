@@ -1,8 +1,22 @@
 @use "../mixins";
 
 .about-page-letters {
-  padding: 0 30px;
+  padding: 0 260px 0 30px;
   margin: 80px 0;
+
+  @include mixins.respond-to(notDesktop) {
+    width: 90%;
+
+    padding: 0;
+    margin: 0 5%;
+  }
+
+  @include mixins.respond-to(onlyDesktopS) {
+    width: 90%;
+
+    padding: 0;
+    margin: 0 5%;
+  }
 
   &__container {
     display: flex;

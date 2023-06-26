@@ -1,14 +1,17 @@
 @use "../mixins";
 
 .side-menu {
-  position: relative;
+  position: sticky;
+  top: 0;
 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
 
+  height: 100%;
   background-color: var(--color-white);
+
   padding: 30px 0 30px 32px;
 
   z-index: 100;
@@ -58,18 +61,6 @@
   &__main-nav {
     width: 100%;
     height: 100%;
-  }
-
-  &__main-nav-wrapper {
-
-    @include mixins.respond-to(notDesktop) {
-      padding: 0 0 30px 0;
-    }
-
-    @include mixins.respond-to(desktopM) {
-      position: sticky;
-      top: 30px;
-    }
   }
 
   &__main-nav-list {
@@ -129,10 +120,36 @@
   &__main-nav-select {
     position: relative;
 
+    & .side-menu__main-nav-link {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 30px;
+
+        width: 6px;
+        height: 10px;
+        background: url('../img/image/select-arrow.svg');
+        background-repeat: no-repeat;
+        background-size: 6px 10px;
+
+        transform: translateY(-50%);
+        transition: right 0.3s;
+      }
+    }
+
 
     @include mixins.respond-to(notDesktop) {
       display: flex;
       flex-direction: column;
+
+      & .side-menu__main-nav-link {
+        &::after {
+          display: none;
+        }
+      }
 
       // &--active {
       //   & .side-menu__main-nav-sublist {
@@ -143,6 +160,18 @@
 
     @include mixins.respond-to(desktopS) {
       &:hover {
+
+        & .side-menu__main-nav-link {
+
+          &::after {
+            content: "";
+            right: 25px;
+
+            transition: right 0.3s;
+          }
+        }
+
+
         & .side-menu__main-nav-sublist {
           opacity: 1;
 
@@ -221,7 +250,7 @@
 
     width: 100%;
 
-    padding: 0 30px 0 30px;
+    padding: 0 30px;
   }
 
   &__main-nav-sublink {

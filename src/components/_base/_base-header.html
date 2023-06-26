@@ -15,84 +15,82 @@
 </head>
 
 <body>
-  <div class="body-container" style="overflow: hidden;">
-
-    <div class="modal-with-form" id="modal_with_form">
-      <div class="modal-with-form__wrapper">
-        <button class="modal-with-form__close follow-change base-button" id="modal_with_form_close">
-          <svg class="modal-with-form__close-icon" width="20" height="20" alt="#">
-            <use href="img/icon/sprite.svg#modal-close-icon"></use>
-          </svg>
-        </button>
-        <div class="modal-with-form__inner">
-          <div class="feedback__content">
-            <h2 class="feedback__content-title base-title">Наш инженер вам перезвонит</h2>
-            <form class="feedback__content-form" id="modal_with_form_formset">
-              <div class="feedback__content-form-formset">
-                <input class="feedback__content-form-input" type="text" placeholder="Как вас зовут" required>
-                <input class="feedback__content-form-input" type="tel" placeholder="Номер телефона" required>
-              </div>
-              <div class="feedback__content-form-formset">
-                <button class="feedback__content-form-submit hover-blue base-button" type="submit">отправить инженеру</button>
-                <p class="feedback__content-form-caption base-par">
-                  Нажимая на кнопку, вы даете согласие
-                  на <a class="feedback__form-caption-link base-link">обработку персональных данных</a>
-                </p>
-              </div>
-            </form>
-          </div>
+  <div class="modal-with-form" id="modal_with_form">
+    <div class="modal-with-form__wrapper">
+      <button class="modal-with-form__close follow-change base-button" id="modal_with_form_close">
+        <svg class="modal-with-form__close-icon" width="20" height="20" alt="#">
+          <use href="img/icon/sprite.svg#modal-close-icon"></use>
+        </svg>
+      </button>
+      <div class="modal-with-form__inner">
+        <div class="feedback__content">
+          <h2 class="feedback__content-title base-title">Наш инженер вам перезвонит</h2>
+          <form class="feedback__content-form" id="modal_with_form_formset">
+            <div class="feedback__content-form-formset">
+              <input class="feedback__content-form-input" type="text" placeholder="Как вас зовут" required>
+              <input class="feedback__content-form-input" type="tel" placeholder="Номер телефона" required>
+            </div>
+            <div class="feedback__content-form-formset">
+              <button class="feedback__content-form-submit hover-blue base-button" type="submit">отправить инженеру</button>
+              <p class="feedback__content-form-caption base-par">
+                Нажимая на кнопку, вы даете согласие
+                на <a class="feedback__form-caption-link base-link">обработку персональных данных</a>
+              </p>
+            </div>
+          </form>
         </div>
-        <div class="modal-with-form__success">
-          <span class="modal-with-form__success-text">Спасибо, ваша заявка отправлена!</span>
-        </div>
+      </div>
+      <div class="modal-with-form__success">
+        <span class="modal-with-form__success-text">Спасибо, ваша заявка отправлена!</span>
       </div>
     </div>
+  </div>
 
-    <div class="modal-without-form" id="modal_without_form">
-      <div class="modal-without-form__wrapper">
-        <button class="modal-without-form__close follow-change base-button" id="modal_without_form_close">
-          <svg class="modal-without-form__close-icon" width="20" height="20" alt="#">
-            <use href="img/icon/sprite.svg#modal-close-icon"></use>
-          </svg>
-        </button>
-        <div class="modal-without-form__success">
-          <span class="modal-without-form__success-text">Спасибо, ваша заявка отправлена!</span>
-        </div>
+  <div class="modal-without-form" id="modal_without_form">
+    <div class="modal-without-form__wrapper">
+      <button class="modal-without-form__close follow-change base-button" id="modal_without_form_close">
+        <svg class="modal-without-form__close-icon" width="20" height="20" alt="#">
+          <use href="img/icon/sprite.svg#modal-close-icon"></use>
+        </svg>
+      </button>
+      <div class="modal-without-form__success">
+        <span class="modal-without-form__success-text">Спасибо, ваша заявка отправлена!</span>
       </div>
     </div>
+  </div>
 
-    <header class="page-header">
-      <div class="header-nav">
-        <ul class="header-nav__list base-list">
-          <li class="header-nav__list-item">
-            <svg class="header-nav__list-item-icon" width="13" height="16" aria-hidden="true">
-              <use href="img/icon/sprite.svg#location-icon"></use>
-            </svg>
-            <span class="header-nav__list-item-text">г. Москва, 115432, проспект Верндаского, 18 к3</span>
-          </li>
-          <li class="header-nav__list-item">
-            <svg class="header-nav__list-item-icon" width="16" height="13" aria-hidden="true">
-              <use href="img/icon/sprite.svg#email-icon"></use>
-            </svg>
-            <a class="header-nav__list-item-text base-link" href="mailto:info@axelior.ru">info@axelior.ru</a>
-          </li>
-          <li class="header-nav__list-item">
-            <button class="header-nav__list-item-button hover-blue base-button" type="button">
-              <span class="header-nav__item-button-text">Online-звонок инженеру</span>
-            </button>
-          </li>
-        </ul>
-
-        <a class="header-nav__mobile-logo base-link" href="index.html">
-          <svg class="side-menu__logo-icon" width="166" height="46" aria-hidden="true">
-            <use href="img/icon/sprite.svg#logo-icon"></use>
+  <header class="page-header">
+    <div class="header-nav">
+      <ul class="header-nav__list base-list">
+        <li class="header-nav__list-item">
+          <svg class="header-nav__list-item-icon" width="13" height="16" aria-hidden="true">
+            <use href="img/icon/sprite.svg#location-icon"></use>
           </svg>
-        </a>
+          <span class="header-nav__list-item-text">г. Москва, 115432, проспект Верндаского, 18 к3</span>
+        </li>
+        <li class="header-nav__list-item">
+          <svg class="header-nav__list-item-icon" width="16" height="13" aria-hidden="true">
+            <use href="img/icon/sprite.svg#email-icon"></use>
+          </svg>
+          <a class="header-nav__list-item-text base-link" href="mailto:info@axelior.ru">info@axelior.ru</a>
+        </li>
+        <li class="header-nav__list-item">
+          <button class="header-nav__list-item-button hover-blue base-button" type="button">
+            <span class="header-nav__item-button-text">Online-звонок инженеру</span>
+          </button>
+        </li>
+      </ul>
 
-        <button class="header-nav__burger base-button" id="burger">
-          <span class="header-nav__burger-line"></span>
-        </button>
-      </div>
+      <a class="header-nav__mobile-logo base-link" href="index.html">
+        <svg class="side-menu__logo-icon" width="166" height="46" aria-hidden="true">
+          <use href="img/icon/sprite.svg#logo-icon"></use>
+        </svg>
+      </a>
+
+      <button class="header-nav__burger base-button" id="burger">
+        <span class="header-nav__burger-line"></span>
+      </button>
+    </div>
 
 
-    </header>
+  </header>

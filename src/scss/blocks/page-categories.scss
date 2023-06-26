@@ -7,11 +7,21 @@
     padding: 0;
   }
 
+  @include mixins.respond-to(onlyDesktopS) {
+    padding: 0;
+  }
+
   &__container {
     @include mixins.respond-to(notDesktop) {
       width: 90%;
 
-      margin: 0 auto;
+      margin: 0 5%;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      width: 90%;
+
+      margin: 0 5%;
     }
   }
 
@@ -21,14 +31,24 @@
     @include mixins.respond-to(notDesktop) {
       margin: 40px 0;
     }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      margin: 40px 0;
+    }
   }
 
   &__tabs-content {
     display: none;
 
     &--active {
-      display: grid;
-      grid-template: repeat(2, 1fr) / repeat(2, 555px);
+      // display: grid;
+      // grid-template: repeat(2, 1fr) / repeat(2, 555px);
+      // gap: 30px;
+
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: flex-start;
       gap: 30px;
 
       @include mixins.respond-to(notDesktop) {
@@ -36,6 +56,18 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+      }
+
+      @include mixins.respond-to(onlyDesktopS) {
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        gap: 30px;
+      }
+
+      @include mixins.respond-to(onlyDesktopD) {
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        gap: 30px;
       }
     }
   }
@@ -51,6 +83,14 @@
 
     @include mixins.respond-to(notDesktop) {
       width: 100%;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      width: auto;
+    }
+
+    @include mixins.respond-to(onlyDesktopD) {
+      width: auto;
     }
 
     &:hover {

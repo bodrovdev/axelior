@@ -23,6 +23,10 @@
     @include mixins.respond-to(notDesktop) {
       display: none;
     }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      display: none;
+    }
   }
 }
 
@@ -249,9 +253,9 @@
   }
 
   &__content-button {
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: fixed;
+    top: 420px;
+    right: 40px;
 
     display: none;
     flex-direction: column;

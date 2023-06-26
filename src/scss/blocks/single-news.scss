@@ -47,7 +47,16 @@
     flex-direction: column;
     gap: 30px;
 
-    max-width: 700px;
+    // max-width: 700px;
+    padding: 0 470px 0 0;
+
+    @include mixins.respond-to(notDesktop) {
+      padding: 0;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      padding: 0;
+    }
 
     & p {
       font-size: 13px;

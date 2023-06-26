@@ -31,10 +31,17 @@
 }
 
 .about {
-  padding: 0 30px;
+  padding: 0 260px 0 30px;
   margin: 60px 0 80px 0;
 
   @include mixins.respond-to(notDesktop) {
+    width: 90%;
+
+    padding: 0;
+    margin: 40px 5%;
+  }
+
+  @include mixins.respond-to(onlyDesktopS) {
     width: 90%;
 
     padding: 0;
@@ -50,7 +57,7 @@
   &__headliner {
     display: inline-block;
 
-    max-width: 840px;
+    // max-width: 840px;
 
     font-weight: 700;
     font-size: 18px;
@@ -72,7 +79,7 @@
     display: flex;
     gap: 40px;
 
-    max-width: 840px;
+    // max-width: 840px;
 
     margin: 0 0 60px 0;
 
@@ -87,7 +94,7 @@
   &__content-item {
     display: inline-block;
 
-    max-width: 400px;
+    // max-width: 400px;
 
     font-weight: 350;
     font-size: 13px;

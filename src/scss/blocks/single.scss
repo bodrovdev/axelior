@@ -1,7 +1,7 @@
 @use "../mixins";
 
 .single {
-  padding: 0 30px;
+  padding: 0 260px 0 30px;
   margin: 40px 0 80px 0;
 
   @include mixins.respond-to(notDesktop) {
@@ -18,9 +18,9 @@
     @include mixins.respond-to(notDesktop) {
       flex-direction: column;
 
-      width: 90%;
+      // width: 90%;
 
-      margin: 0 5%;
+      margin: 0 30px;
     }
   }
 
