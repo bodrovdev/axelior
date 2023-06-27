@@ -18,6 +18,8 @@
 
   transition: visibility 0.3s, opacity 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 
+  padding: 10px;
+
   z-index: 1000;
 
   &--active {
@@ -160,6 +162,8 @@
   overscroll-behavior-y: contain;
 
   transition: visibility 0.3s, opacity 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+  padding: 10px;
 
   z-index: 1000;
 

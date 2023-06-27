@@ -63,20 +63,20 @@ let index_catalogue_slider = new Swiper(".index-catalogue__slider", {
 var letters_slider_init = false;
 
 function letters_slider() {
-  if (window.innerWidth <= 1599) {
+  if (window.innerWidth <= 1439) {
     if (!letters_slider_init) {
       letters_slider_init = true;
       var letters_slider = new Swiper(".about-page-letters__slider", {
         direction: "horizontal",
         spaceBetween: 46,
-        slidesPerView: "auto",
+
 
         breakpoints: {
           320: {
-            slidesPerView: "auto",
+            slidesPerView: 1,
           },
-          1439: {
-            slidesPerView: 4,
+          1024: {
+            slidesPerView: "auto",
           }
         },
 

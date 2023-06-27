@@ -155,6 +155,8 @@ window.addEventListener('load', () => {
         // - Закрытие модалки по нажатию крестика
         modal_with_form_close.addEventListener('click', () => {
             closeFormModal();
+            document.querySelector('.modal-with-form__inner').classList.remove('modal-with-form__inner--hidden');
+            document.querySelector('.modal-with-form__success').classList.remove('modal-with-form__success--active');
         })
 
         // - Закрытие модалки по нажатию на пустое место
@@ -164,6 +166,8 @@ window.addEventListener('load', () => {
             }
             else {
                 closeFormModal();
+                document.querySelector('.modal-with-form__inner').classList.remove('modal-with-form__inner--hidden');
+                document.querySelector('.modal-with-form__success').classList.remove('modal-with-form__success--active');
             }
         })
 
@@ -213,6 +217,18 @@ window.addEventListener('load', () => {
             else {
                 closeWithoutFormModal();
             }
+        })
+    }
+})
+
+// --- Отключение подсветки ошибок в инпутах
+window.addEventListener('load', () => {
+    if (document.querySelectorAll('input') === null) {
+        return;
+    }
+    else {
+        document.querySelectorAll('input').forEach((input) => {
+            input.setAttribute('spellcheck', 'false');
         })
     }
 })

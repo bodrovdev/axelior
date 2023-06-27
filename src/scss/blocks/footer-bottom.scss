@@ -40,10 +40,7 @@
     gap: 40px;
 
     @include mixins.respond-to(notDesktop) {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: flex-start;
+      grid-template: 1fr / repeat(auto-fit, minmax(160px, 1fr));
 
       width: 100%;
     }
@@ -54,10 +51,6 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 28px;
-
-    @include mixins.respond-to(notDesktop) {
-      max-width: 130px;
-    }
   }
 
   &__nav-item-title,
