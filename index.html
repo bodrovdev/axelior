@@ -106,7 +106,7 @@
 
   <nav class="side-menu__main-nav">
     <ul class="side-menu__main-nav-list base-list">
-      <li class="side-menu__main-nav-item current_page_item">
+      <li class="side-menu__main-nav-item">
         <a class="side-menu__main-nav-link base-link" href="index.html">Главная</a>
       </li>
       <li class="side-menu__main-nav-item">
@@ -184,6 +184,29 @@
     </div>
   </nav>
 </nav>
+
+<script>
+  // --- Проверка двойного активного класса
+  function checkDoubleActive(element) {
+    if (document.querySelectorAll(`.${element}`).length <= 1) {
+      return;
+    }
+    else {
+      let current_hash = window.location.hash.split('#')[1];
+      let target_links = Array.from(document.querySelectorAll(`.${element} a`)).filter(item => item.href.split('').includes('#'));
+
+      target_links.forEach((link_item) => {
+        if (link_item.href.split('#')[1] === current_hash) {
+          target_links.forEach((link_value) => link_value.parentNode.classList.remove(element));
+          link_item.parentNode.classList.add(element);
+        }
+      })
+    }
+  }
+
+  checkDoubleActive('current_page_item');
+  checkDoubleActive('current-menu-item');
+</script>
   <div class="main-content main-content--active" style="overflow: hidden;">
     <div class="index-heading">
       <section class="heading">
