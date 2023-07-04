@@ -86,11 +86,12 @@ window.addEventListener('load', () => {
         // - Переход к табам при загрузке на странице категорий, или при изменении хэша страница
         let tabs_buttons = document.querySelectorAll('.links__list-item');
         let tabs_content = document.querySelectorAll('.page-categories__tabs-content');
+        let tabs_links = Array.from(document.querySelectorAll(`.side-menu ul a`)).filter((link) => link.href.split('').includes('#'));
 
         function tabs() {
             function changeById(id, elements) {
                 elements.forEach((item) => {
-                    if (item.dataset.tab === id) {
+                    if (item.dataset.tab == id) {
                         elements.forEach((value) => {
                             value.classList.remove(`${value.classList[0]}--active`);
                         })
@@ -99,21 +100,34 @@ window.addEventListener('load', () => {
                 })
             }
 
+            function changeLinkById(id, links) {
+                links.forEach((link) => {
+                    if (link.href.split('#')[1] == id) {
+                        links.forEach((value) => {
+                            value.parentNode.classList.remove(`current-menu-item`);
+                        })
+                        link.parentNode.classList.add(`current-menu-item`);
+                    }
+                })
+            }
+
             (function () {
                 changeById(window.location.hash.split('#')[1], tabs_buttons);
                 changeById(window.location.hash.split('#')[1], tabs_content);
+                changeLinkById(window.location.hash.split('#')[1], tabs_links);
             }())
         }
 
-        window.addEventListener('load', () => { tabs(); });
+        tabs();
         window.addEventListener('hashchange', () => { tabs() });
-
 
         // - Смена табов по клику
         tabs_buttons.forEach((button_item) => {
             button_item.addEventListener('click', () => {
                 tabs_buttons.forEach((button_value) => { button_value.classList.remove((`${button_value.classList[0]}--active`)) });
                 button_item.classList.add(`${button_item.classList[0]}--active`);
+
+                window.location.hash = window.location.hash.split('#')[0] + button_item.dataset.tab;
 
                 tabs_content.forEach((content_item) => {
                     if (button_item.dataset.tab === content_item.dataset.tab) {
@@ -122,6 +136,12 @@ window.addEventListener('load', () => {
                     }
                 })
 
+                tabs_links.forEach((link_item) => {
+                    if (button_item.dataset.tab === link_item.href.split('#')[1]) {
+                        tabs_links.forEach((link_value) => link_value.parentNode.classList.remove('current-menu-item'));
+                        link_item.parentNode.classList.add('current-menu-item');
+                    }
+                })
             })
         })
     }
