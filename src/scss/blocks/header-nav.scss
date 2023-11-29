@@ -108,7 +108,7 @@
   }
 
   @include mixins.respond-to(desktopS) {
-    width: 80%;
+    width: 75%;
   }
 
   @include mixins.respond-to(desktopD) {

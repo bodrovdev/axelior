@@ -8,7 +8,7 @@
 
   <nav class="side-menu__main-nav">
     <ul class="side-menu__main-nav-list base-list">
-      <li class="side-menu__main-nav-item">
+      <li class="side-menu__main-nav-item current-menu-item">
         <a class="side-menu__main-nav-link base-link" href="index.html">Главная</a>
       </li>
       <li class="side-menu__main-nav-item">
@@ -64,26 +64,31 @@
     </ul>
 
     <div class="side-menu__contacts">
-      <a class="side-menu__tel-link base-link" href="tel:+7 (495) 150-00-00">+7 (495) 150-00-00</a>
-      <button class="side-menu__button modal-with-form__button base-button" type="button">
-        <svg class="side-menu__button-icon" width="10" height="13" aria-hidden="true">
-          <use href="img/icon/sprite.svg#phone-icon"></use>
-        </svg>
-        <span class="side-menu__button-text">Перезвонить вам?</span>
-      </button>
-      <div class="side-menu__contacts-item">
-        <svg class="side-menu__contacts-item-icon" width="13" height="16" aria-hidden="true">
-          <use href="img/icon/sprite.svg#location-icon"></use>
-        </svg>
-        <span class="side-menu__contacts-item-text">г. Москва, 115432, проспект Верндаского, 18 к3</span>
-      </div>
-      <div class="side-menu__contacts-item">
-        <svg class="side-menu__contacts-item-icon" width="16" height="13" aria-hidden="true">
-          <use href="img/icon/sprite.svg#email-icon"></use>
-        </svg>
-        <a class="side-menu__contacts-item-text base-link" href="mailto:info@axelior.ru">info@axelior.ru</a>
+      <a class="side-menu__contacts-phone-link base-link" href="#">
+        <div>
+          <svg class="side-menu__contacts-phone-icon" width="10" height="10" aria-hidden="true">
+            <use href="img/icon/sprite.svg#phone2-icon"></use>
+          </svg>
+        </div>
+        <span class="side-menu__contacts-phone-text">+7 (495) 150-00-00</span>
+      </a>
+      <button class="side-menu__contacts-button modal-with-form__button base-button">Перезвонить вам?</button>
+      <span class="side-menu__contacts-address">
+        г. Москва, 115432, проспект Верндаского, 18 к3
+      </span>
+      <div class="side-menu__contacts-socials">
+        <a class="side-menu__contacts-socials-link base-link" href="#">
+          <img class="side-menu__contacts-socials-img" src="img/image/new-socials-1.svg" width="32" height="32" alt="#">
+        </a>
+        <a class="side-menu__contacts-socials-link base-link" href="#">
+          <img class="side-menu__contacts-socials-img" src="img/image/new-socials-2.svg" width="32" height="32" alt="#">
+        </a>
+        <a class="side-menu__contacts-socials-link base-link" href="#">
+          <img class="side-menu__contacts-socials-img" src="img/image/new-socials-3.svg" width="32" height="32" alt="#">
+        </a>
       </div>
     </div>
+
   </nav>
 </nav>
 

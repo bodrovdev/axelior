@@ -185,3 +185,20 @@
     }
   }
 }
+
+.feedback__form-caption-link {
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #22A4ED;
+
+  transition: color 0.3s;
+
+  &:hover {
+    color: var(--color-amaranth);
+
+    transition: color 0.3s;
+  }
+}
